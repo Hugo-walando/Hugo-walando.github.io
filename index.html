@@ -3,29 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/05e4dc2a7f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Hugo W</title>
   </head>
   <body>
     <header>
-      <a id="top"></a>
-      <a href="#top">HW</a>
+      <a class="logo" href="#landing">HW</a>
       <nav>
-        <a href=".container_about">À PROPOS</a>
-        <a href=".container_skills">COMPÉTENCES</a>
-        <a href=".container_formations">FORMATIONS</a>
-        <a href=".container_projects">PROJETS</a>
-        <a href=".container_contact">CONTACT</a>
+        <a href="#container_about">À PROPOS</a>
+        <a href="#container_skills">COMPÉTENCES</a>
+        <a href="#container_fo rmations">FORMATIONS</a>
+        <a href="#container_projects">PROJETS</a>
+        <a href="#container_contact">CONTACT</a>
+        <button><i class="icon fa-solid fa-download"></i> CV</button>
       </nav>
     </header>
     <main>
-      <div class="container_intro"></div>
-      <section class="container_about">
-        <p></p>
+      <section id="landing">
+        <div id="container_intro">
+          <h3>Bonjour,</h3>
+          <h1>
+            Je suis
+            <span class="green"> Hugo</span>
+            Walandowitsch
+          </h1>
+          <p>
+            Un <span class="bold">développeur front-end</span> qui aime créer
+            des applications web intuitives.
+          </p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
+              ><i class="link_logo fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/Hugo-walando"
+              ><i class="link_logo fa-brands fa-square-github"></i
+            ></a>
+            <button class="green_btn">Me Contacter</button>
+            <button class="dark_btn">
+              <i class="icon fa-solid fa-download"></i> Télécharger mon CV
+            </button>
+            <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
+          </div>
+        </div>
       </section>
-      <section class="container_skills"></section>
-      <section class="container_formations"></section>
-      <section class="container_projects"></section>
-      <section class="container_contact"></section>
+
+      <section id="container_about">
+        <h1 class="section_title">À PROPOS DE MOI</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+          porro fugit explicabo perferendis, eum nisi dolorem, totam dolorum
+          error quibusdam sit accusantium inventore molestias quia impedit?
+          Autem totam aliquid voluptate? Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. A dolor laboriosam veritatis aperiam modi qui nulla
+          totam perferendis, dolorum excepturi mollitia. Quaerat, aperiam.
+          Repellat quas, distinctio quis consequatur sed reiciendis.
+        </p>
+      </section>
+      <section id="container_skills">
+        <h1 class="section_title">COMPÉTENCES</h1>
+      </section>
+      <section id="container_formations"></section>
+      <section id="container_projects"></section>
+      <section id="container_contact"></section>
     </main>
     <footer></footer>
   </body>

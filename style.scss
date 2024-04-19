@@ -1,0 +1,171 @@
+$background: #1e1e1e;
+$primary-color: #17f2b3;
+$ani-speed: 2s;
+$ani-delay: 1s;
+
+@mixin button(
+  $backColor: $background,
+  $Color: $primary-color,
+  $Border: 0,
+  $BorderColor: $primary-color,
+  $Width: 170px
+) {
+  background-color: $backColor;
+  height: 50px;
+  width: $Width;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-top: 4px;
+  color: $Color;
+  border-width: $Border;
+  border-color: $BorderColor;
+  border-style: solid;
+}
+
+* {
+  font-size: 10px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  border: 0;
+}
+body {
+  background-color: #1e1e1e;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: $background;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 58%;
+    margin-right: 100px;
+    a {
+      text-decoration: none;
+      font-size: 1.7rem;
+    }
+    button {
+      @include button($primary-color, $background, 0, $primary-color, 80px);
+      i {
+        color: $background;
+        font-size: 15px;
+      }
+    }
+    button:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.green {
+  color: $primary-color;
+}
+
+.logo {
+  font-size: 7rem;
+  font-weight: 800;
+  color: $primary-color;
+  margin-left: 100px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+main {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+#landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#container_intro {
+  width: 70%;
+  height: 300px;
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  h1 {
+    font-size: 5.5rem;
+  }
+
+  .green {
+    font-size: 5.5rem;
+  }
+
+  p {
+    font-size: 1.9rem;
+    color: #b4b4b4;
+  }
+  .bold {
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+  .link_logo {
+    font-size: 3rem;
+    margin-top: 13px;
+  }
+
+  .links {
+    width: 500px;
+    height: 200px;
+    margin-left: 100px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .green_btn {
+      @include button($primary-color, $background);
+    }
+
+    .green_btn:hover {
+      cursor: pointer;
+      background-color: white;
+    }
+
+    .dark_btn {
+      @include button($background, $primary-color, 1px, $primary-color, 220px);
+      .icon {
+        color: $primary-color;
+        font-size: 1.7rem;
+      }
+    }
+
+    .dark_btn:hover {
+      cursor: pointer;
+      color: $background;
+      background-color: $primary-color;
+      .icon {
+        color: $background;
+      }
+    }
+  }
+}
+.section_title {
+  font-size: 8rem;
+  color: $primary-color;
+}
+
+#container_about {
+  margin-bottom: 100px;
+  p {
+    font-size: 1.7rem;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
