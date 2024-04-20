@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/05e4dc2a7f.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Hugo W</title>
   </head>
@@ -111,9 +112,24 @@
           </div>
         </div>
       </section>
-      <section id="container_formations"></section>
-      <section id="container_projects"></section>
-      <section id="container_contact"></section>
+      <section id="container_formations">
+        <h1 class="section_title">FORMATIONS</h1>
+      </section>
+      <section id="container_projects">
+        <h1 class="section_title">PROJETS</h1>
+      </section>
+      <section id="container_contact">
+        <h1 class="section_title">CONTACT</h1>
+        <form id="contact_form">
+          <label>Nom:</label>
+          <input type="text" required />
+          <label>Email:</label>
+          <input type="email" required />
+          <label for="#message">Message:</label>
+          <textarea id="message"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>

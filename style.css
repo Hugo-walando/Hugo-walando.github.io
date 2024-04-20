@@ -88,6 +88,7 @@ main {
 }
 #container_intro h1 {
   font-size: 5.5rem;
+  margin: 0;
 }
 #container_intro .green {
   font-size: 5.5rem;
@@ -159,7 +160,7 @@ main {
 .section_title {
   font-size: 8rem;
   color: #17f2b3;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #container_about {
@@ -193,15 +194,19 @@ main {
   grid-column: 1/span 3;
   text-align: center;
   font-size: 3rem;
+  align-self: center;
 }
 .skill_cards .card {
+  transition: 0.3s;
   width: 90%;
   margin: 0 auto;
-  border: 2px solid #17f2b3;
-  background: #1e1e1e;
+  border: 0px solid #17f2b3;
+  background: #2f2f2f;
   height: 90%;
+  align-self: center;
   border-radius: 20px;
   display: flex;
+  box-shadow: 0px 4px 8px #0a0a0a;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -211,6 +216,57 @@ main {
 .skill_cards .card img {
   width: 96px;
   height: 96px;
+}
+.skill_cards .card:hover {
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+}
+
+#container_skills {
+  margin-bottom: 100px;
+}
+
+#container_contact form {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container_contact form label {
+  font-size: 1.7rem;
+}
+#container_contact form input {
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 300px;
+  height: 30px;
+}
+#container_contact form textarea {
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 300px;
+  height: 100px;
+}
+#container_contact form button {
+  background-color: #1e1e1e;
+  height: 50px;
+  width: 220px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-top: 4px;
+  color: #17f2b3;
+  border-width: 1px;
+  border-color: #17f2b3;
+  border-style: solid;
+}
+#container_contact form button:hover {
+  color: #1e1e1e;
+  background-color: #17f2b3;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
