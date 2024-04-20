@@ -43,6 +43,7 @@ header {
   position: fixed;
   top: 0;
   background-color: $background;
+  border-bottom: 1px solid gray;
   nav {
     display: flex;
     align-items: center;
@@ -167,5 +168,35 @@ main {
     width: 600px;
     margin: 0 auto;
     margin-top: 30px;
+  }
+}
+
+#skill_part {
+  width: 500px;
+  height: 500px;
+  background-color: #17f2b3;
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+.skill_cards {
+  margin: 0 auto;
+  width: 800px;
+  display: grid;
+  grid-template: 4rem 120px 4rem repeat(2, 120px) / 1fr 1fr 1fr;
+  h2 {
+    grid-column: 1 / span 3;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .card {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid $primary-color;
+    background: $background;
+    height: 90%;
+    border-radius: 20px;
   }
 }
