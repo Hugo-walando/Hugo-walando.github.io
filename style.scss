@@ -159,6 +159,7 @@ main {
 .section_title {
   font-size: 8rem;
   color: $primary-color;
+  margin-bottom: 30px;
 }
 
 #container_about {
@@ -185,7 +186,7 @@ main {
   margin: 0 auto;
   width: 800px;
   display: grid;
-  grid-template: 4rem 120px 4rem repeat(2, 120px) / 1fr 1fr 1fr;
+  grid-template: 6rem 120px 6rem repeat(2, 120px) 6rem 120px / 1fr 1fr 1fr;
   h2 {
     grid-column: 1 / span 3;
     text-align: center;
@@ -194,9 +195,19 @@ main {
   .card {
     width: 90%;
     margin: 0 auto;
-    border: 1px solid $primary-color;
+    border: 2px solid $primary-color;
     background: $background;
     height: 90%;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    p {
+      font-size: 1.7rem;
+    }
+    img {
+      width: 96px;
+      height: 96px;
+    }
   }
 }
