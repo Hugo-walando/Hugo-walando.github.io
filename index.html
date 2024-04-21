@@ -15,6 +15,7 @@
     ></script>
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Hugo W</title>
   </head>
   <body>
@@ -28,6 +29,7 @@
         <a href="#container_contact">CONTACT</a>
         <button><i class="icon fa-solid fa-download"></i> CV</button>
       </nav>
+      <div id="progress"></div>
     </header>
     <main>
       <section id="landing">
@@ -43,10 +45,12 @@
             des applications web intuitives.
           </p>
           <div class="links">
-            <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
+            <a
+              href="https://www.linkedin.com/in/hugo-walandowitsch/"
+              target="_blank"
               ><i class="link_logo fa-brands fa-linkedin"></i
             ></a>
-            <a href="https://github.com/Hugo-walando"
+            <a href="https://github.com/Hugo-walando" target="_blank"
               ><i class="link_logo fa-brands fa-square-github"></i
             ></a>
             <button class="green_btn">Me Contacter</button>
@@ -56,9 +60,15 @@
             <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
           </div>
         </div>
+        <img src="./img/P1080003.JPG" />
       </section>
 
-      <section id="container_about">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        id="container_about"
+      >
         <h1 class="section_title">À PROPOS DE MOI</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
@@ -70,7 +80,12 @@
           Repellat quas, distinctio quis consequatur sed reiciendis.
         </p>
       </section>
-      <section id="container_skills">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        id="container_skills"
+      >
         <h1 class="section_title">COMPÉTENCES</h1>
         <div class="skill_cards">
           <h2>Frameworks</h2>
@@ -112,21 +127,16 @@
           </div>
         </div>
       </section>
-      <section id="container_formations">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        id="container_formations"
+      >
         <h1 class="section_title">FORMATIONS</h1>
         <section class="design-section">
           <div class="timeline">
-            <!--Well, The reason for this div is to fill space. 
-            This space is technically used for keeping dates, 
-            but I didn't find the need for dates. However, I'll provide 
-            you the styling for dates, so that you can use it if you 
-            wanted to.-->
             <div class="timeline-empty"></div>
-
-            <!--This is the class where the timeline graphics are 
-            housed in. Note that we have timeline-circle 
-            here for that pointer in timeline.-->
-
             <div class="timeline-middle">
               <div class="timeline-circle"></div>
             </div>
@@ -155,22 +165,100 @@
           </div>
         </section>
       </section>
-      <section id="container_projects">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        id="container_projects"
+      >
         <h1 class="section_title">PROJETS</h1>
+        <div class="project_card">
+          <img src="./img/QuizCulture.png" alt="Project Img" />
+          <div class="top_card">
+            <div class="card_text">
+              <h3>QuizCulture</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                ut, tempora dolor, alias sit quos rerum eos officia eligendi
+                neque autem. Temporibus, quae.
+              </p>
+            </div>
+            <div class="card_techs">
+              <span class="tech">HTML</span>
+              <span class="tech">CSS</span>
+              <span class="tech">JavaScript</span>
+              <span class="tech">React</span>
+            </div>
+          </div>
+          <div class="card_buttons">
+            <a
+              href="https://github.com/Hugo-walando/QuizCulture"
+              target="_blank"
+              ><i class="fa-solid fa-code"></i> Code Source</a
+            >
+            <a href="https://quizculture-5362f.web.app/" target="_blank"
+              ><i class="fa-solid fa-play"></i> Demo</a
+            >
+          </div>
+        </div>
       </section>
-      <section id="container_contact">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        id="container_contact"
+      >
         <h1 class="section_title">CONTACT</h1>
-        <form id="contact_form">
+        <form
+          id="contact_form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="ea3aa204-96df-478f-8f95-4d08e1e15147"
+          />
           <label>Nom:</label>
-          <input type="text" required />
+          <input name="name" type="text" required placeholder="Votre Nom .." />
           <label>Email:</label>
-          <input type="email" required />
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="Votre Email .."
+          />
           <label for="#message">Message:</label>
-          <textarea id="message"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Votre Message .."
+          ></textarea>
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://web3forms.com/success"
+          />
           <button type="submit">Envoyer</button>
         </form>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer_links">
+        <a
+          href="https://www.linkedin.com/in/hugo-walandowitsch/"
+          target="_blank"
+          ><i class="link_logo fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Hugo-walando" target="_blank"
+          ><i class="link_logo fa-brands fa-square-github"></i
+        ></a>
+      </div>
+      <p>Fait par Hugo Walandowitsch <span>2024</span></p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

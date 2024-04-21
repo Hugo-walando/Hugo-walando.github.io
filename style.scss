@@ -35,6 +35,7 @@ $ani-delay: 1s;
 }
 html {
   scroll-behavior: smooth;
+  scroll-timeline: --page-scroll block;
 }
 body {
   background-color: #1e1e1e;
@@ -59,8 +60,12 @@ header {
       text-decoration: none;
       font-size: 1.7rem;
     }
+    a:hover {
+      color: $primary-color;
+    }
     button {
       @include button($primary-color, $background, 0, $primary-color, 80px);
+      height: 40px;
       i {
         color: $background;
         font-size: 15px;
@@ -68,10 +73,31 @@ header {
     }
     button:hover {
       cursor: pointer;
+      background-color: white;
     }
   }
 }
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 
+#progress {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 5px;
+  background: $primary-color;
+
+  transform-origin: 0 50%;
+  animation: grow-progress auto linear;
+  animation-timeline: --page-scroll;
+}
 .green {
   color: $primary-color;
 }
@@ -81,6 +107,7 @@ header {
   font-weight: 800;
   color: $primary-color;
   margin-left: 100px;
+  text-decoration: none;
 }
 
 .logo:hover {
@@ -95,6 +122,12 @@ main {
   height: 100vh;
   display: flex;
   align-items: center;
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 #container_intro {
   width: 70%;
@@ -122,12 +155,12 @@ main {
     font-size: 1.7rem;
   }
   .link_logo {
-    font-size: 3rem;
-    margin-top: 13px;
+    font-size: 5rem;
+    margin-top: 5px;
   }
 
   .links {
-    width: 500px;
+    width: 550px;
     height: 200px;
     margin-left: 100px;
     margin-top: 20px;
@@ -169,8 +202,7 @@ main {
 }
 
 #container_about {
-  margin-bottom: 100px;
-  padding-top: 80px;
+  padding-top: 130px;
   p {
     font-size: 1.7rem;
     width: 600px;
@@ -229,8 +261,7 @@ main {
 }
 
 #container_skills {
-  margin-bottom: 100px;
-  padding-top: 80px;
+  padding-top: 130px;
 }
 
 #container_contact {
@@ -243,12 +274,12 @@ main {
     align-items: center;
     label {
       align-self: flex-start;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     input {
       background: transparent;
       border-bottom: 1px solid white;
-      font-size: 2rem;
+      font-size: 1.7rem;
       width: inherit;
       height: 30px;
       margin-bottom: 20px;
@@ -257,6 +288,10 @@ main {
     }
     input:focus {
       border: none;
+    }
+    input::placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
     }
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -276,6 +311,10 @@ main {
       height: 100px;
       padding: 5px;
     }
+    textarea::placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
     button {
       @include button($background, $primary-color, 1px, $primary-color, 220px);
       font-size: 2rem;
@@ -290,7 +329,7 @@ main {
 }
 
 #container_formations {
-  padding-top: 80px;
+  padding-top: 130px;
 }
 
 .design-section {
@@ -298,7 +337,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 .design {
@@ -369,5 +408,94 @@ main {
     background-color: $background;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+}
+
+#container_projects {
+  padding-top: 130px;
+}
+.project_card {
+  background-color: $background-varient;
+  width: min(400px, calc(100vw - 70px));
+  max-width: 350px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  img {
+    transition: 0.5;
+    width: 100%;
+    border-radius: 15px;
+  }
+  img:hover {
+    transition: 0.5s;
+    filter: brightness(0.6);
+  }
+  .top_card {
+    display: flex;
+    padding-top: 10px;
+    height: 40%;
+    .card_text {
+      height: 40%;
+      width: 60%;
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+        opacity: 0.5;
+      }
+    }
+    .card_techs {
+      width: 40%;
+      .tech {
+        display: inline-block;
+        font-size: 1.4rem;
+        color: $background-varient;
+        background-color: white;
+        font-weight: 600;
+        padding: 3px;
+        border-radius: 5px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .card_buttons {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    a {
+      color: $background-varient;
+      background-color: $primary-color;
+      font-size: 1.7rem;
+      font-weight: 700;
+      display: inline-block;
+      padding: 5px 5px;
+      border-radius: 10px;
+      text-decoration: none;
+      i {
+        font-size: 1.7rem;
+        color: $background-varient;
+      }
+    }
+    a:hover {
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  padding: 35px;
+  p {
+    font-size: 1.7rem;
+    text-align: center;
+    span {
+      font-size: 1.7rem;
+      color: $primary-color;
+    }
   }
 }
