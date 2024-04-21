@@ -3,6 +3,8 @@ $background-varient: #2f2f2f;
 $primary-color: #17f2b3;
 $ani-speed: 2s;
 $ani-delay: 1s;
+$animation-delay: 0.1s;
+$arrow-size: 30px;
 
 @mixin button(
   $backColor: $background,
@@ -63,19 +65,24 @@ header {
     a:hover {
       color: $primary-color;
     }
-    button {
-      @include button($primary-color, $background, 0, $primary-color, 80px);
-      height: 40px;
-      i {
-        color: $background;
-        font-size: 15px;
-      }
-    }
-    button:hover {
-      cursor: pointer;
-      background-color: white;
-    }
   }
+}
+.button_link {
+  color: $background;
+  background-color: #17f2b3;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  i {
+    color: $background;
+    font-size: 15px;
+  }
+}
+.button_link:hover {
+  cursor: pointer;
+  background-color: white;
+  color: $background;
 }
 @keyframes grow-progress {
   from {
@@ -119,15 +126,21 @@ main {
   margin-right: 100px;
 }
 #landing {
-  height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
   }
+}
+
+#top_landing {
+  display: flex;
+  align-items: center;
 }
 #container_intro {
   width: 70%;
@@ -193,6 +206,42 @@ main {
         color: $background;
       }
     }
+  }
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80vh;
+  left: 50%;
+  right: 50%;
+}
+.scroll-arrow {
+  width: $arrow-size;
+  height: $arrow-size;
+  transform: rotate(45deg);
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  animation: arrow-wave 1s infinite;
+  animation-direction: alternate;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: $animation-delay * $i;
+    }
+  }
+}
+
+@keyframes arrow-wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .section_title {
@@ -268,7 +317,7 @@ main {
   form {
     margin: 0 auto;
     width: 500px;
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -319,11 +368,18 @@ main {
       @include button($background, $primary-color, 1px, $primary-color, 220px);
       font-size: 2rem;
       margin-top: 20px;
+      i {
+        font-size: 2rem;
+        color: $primary-color;
+      }
     }
     button:hover {
       color: $background;
       background-color: $primary-color;
       cursor: pointer;
+      i {
+        color: $background;
+      }
     }
   }
 }
@@ -490,6 +546,18 @@ main {
 
 footer {
   padding: 35px;
+  height: auto;
+  .footer_links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    a {
+      i {
+        font-size: 5rem;
+      }
+    }
+  }
   p {
     font-size: 1.7rem;
     text-align: center;
