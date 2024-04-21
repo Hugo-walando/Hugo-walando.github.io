@@ -464,6 +464,7 @@ main {
   font-size: 1.7rem;
 }
 .timeline-content p {
+  margin-top: 10px;
   font-size: 1.7rem;
   opacity: 0.5;
 }
