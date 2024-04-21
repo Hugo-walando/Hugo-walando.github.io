@@ -67,20 +67,66 @@ header {
     }
   }
 }
-.button_link {
-  color: $background;
-  background-color: #17f2b3;
+@mixin button_link(
+  $backColor: $background,
+  $Color: $primary-color,
+  $Border: 0,
+  $BorderColor: $primary-color,
+  $IColor: $primary-color
+) {
+  color: $Color;
+  background-color: $backColor;
   font-weight: 700;
+  border-width: $Border;
+  border-color: $BorderColor;
   border-radius: 10px;
+  border-style: solid;
   padding: 10px 20px;
-  display: inline-block;
+  font-size: 1.7rem;
+  display: block;
+  height: min-content;
+  text-decoration: none;
   i {
-    color: $background;
+    color: $IColor;
     font-size: 15px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button_link_nav {
+  @include button_link($primary-color, $background, 0, none, $background);
+  &:hover {
+    color: $background;
+    background-color: white;
+  }
+}
+
+.button_link_intro_dark {
+  @include button_link(
+    $background,
+    $primary-color,
+    2px,
+    $primary-color,
+    $primary-color
+  );
+  padding: 9px 19px;
+  &:hover {
+    background-color: $primary-color;
+    color: $background;
+    i {
+      color: $background;
+    }
+  }
+}
+.button_link_intro_green {
+  @include button_link($primary-color, $background);
+  &:hover {
+    background-color: white;
   }
 }
 .button_link:hover {
-  cursor: pointer;
   background-color: white;
   color: $background;
 }
@@ -174,38 +220,13 @@ main {
 
   .links {
     width: 550px;
-    height: 200px;
+    height: auto;
     margin-left: 100px;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-
-    .green_btn {
-      @include button($primary-color, $background);
-    }
-
-    .green_btn:hover {
-      cursor: pointer;
-      background-color: white;
-    }
-
-    .dark_btn {
-      @include button($background, $primary-color, 1px, $primary-color, 220px);
-      .icon {
-        color: $primary-color;
-        font-size: 1.7rem;
-      }
-    }
-
-    .dark_btn:hover {
-      cursor: pointer;
-      color: $background;
-      background-color: $primary-color;
-      .icon {
-        color: $background;
-      }
-    }
   }
 }
 
@@ -427,10 +448,23 @@ main {
   h3 {
     font-size: 2rem;
   }
+  img {
+    width: 25px;
+    border-radius: 5px;
+  }
+  h4 {
+    font-size: 1.7rem;
+  }
   p {
     font-size: 1.7rem;
     opacity: 0.5;
   }
+}
+.structure {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
 }
 
 .timeline-component {
@@ -564,6 +598,14 @@ footer {
     span {
       font-size: 1.7rem;
       color: $primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  nav {
+    a {
+      display: none;
     }
   }
 }
