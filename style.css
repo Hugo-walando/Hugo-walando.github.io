@@ -188,7 +188,6 @@ main {
 }
 
 #container_intro {
-  width: 70%;
   height: 300px;
 }
 #container_intro h3 {
@@ -607,9 +606,50 @@ footer p span {
   color: #17f2b3;
 }
 
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
-  nav a {
-    display: none;
+  #top_landing {
+    flex-direction: column;
+  }
+  .nav_links {
+    transition: all 0.5s ease;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e1e;
+    border-left: 1px solid white;
+    margin-left: 4%;
+  }
+  .nav_links a,
+  .nav_links .button_link_nav {
+    margin: 20px;
+  }
+  .nav_links.mobile-menu {
+    right: 0;
+  }
+  .menu {
+    display: block;
+    width: 60px;
+  }
+  .skill_cards {
+    width: 600px;
+    grid-template: 5rem 80px 5rem repeat(2, 80px) 5rem 80px/1fr 1fr 1fr;
+  }
+  .skill_cards .card img {
+    width: 60px;
+    height: 60px;
   }
 }
 

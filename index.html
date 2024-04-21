@@ -21,7 +21,7 @@
   <body>
     <header>
       <a class="logo" href="#landing">HW</a>
-      <nav>
+      <nav class="nav_links">
         <a href="#container_about">À PROPOS</a>
         <a href="#container_skills">COMPÉTENCES</a>
         <a href="#container_formations">FORMATIONS</a>
@@ -31,6 +31,7 @@
           <i class="icon fa-solid fa-download"></i> CV
         </a>
       </nav>
+      <img class="menu" src="img/icons8-menu-96 (1).png" />
       <div id="progress"></div>
     </header>
     <main>
@@ -288,6 +289,14 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      const menuHamburger = document.querySelector(".menu");
+      const navLinks = document.querySelector(".nav_links");
+
+      menuHamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
     </script>
   </body>
 </html>

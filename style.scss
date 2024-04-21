@@ -189,7 +189,6 @@ main {
   align-items: center;
 }
 #container_intro {
-  width: 70%;
   height: 300px;
 
   h3 {
@@ -602,10 +601,49 @@ footer {
   }
 }
 
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
-  nav {
-    a {
-      display: none;
+  #top_landing {
+    flex-direction: column;
+  }
+  .nav_links {
+    transition: all 0.5s ease;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+    margin: 0;
+    background-color: $background;
+    border-left: 1px solid white;
+    margin-left: 4%;
+    a,
+    .button_link_nav {
+      margin: 20px;
+    }
+  }
+  .nav_links.mobile-menu {
+    right: 0;
+  }
+  .menu {
+    display: block;
+    width: 60px;
+  }
+  .skill_cards {
+    width: 600px;
+    grid-template: 5rem 80px 5rem repeat(2, 80px) 5rem 80px / 1fr 1fr 1fr;
+    .card img {
+      width: 60px;
+      height: 60px;
     }
   }
 }
