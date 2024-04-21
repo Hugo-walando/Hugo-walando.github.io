@@ -185,6 +185,7 @@ main {
 #top_landing {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 #container_intro {
@@ -431,7 +432,6 @@ main {
 }
 
 .timeline {
-  width: 80%;
   height: auto;
   max-width: 900px;
   margin: 0 auto;
