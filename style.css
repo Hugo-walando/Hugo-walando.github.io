@@ -271,11 +271,27 @@ main {
 #container_about {
   padding-top: 130px;
 }
-#container_about p {
+#container_about .text {
+  margin: 0 auto;
+  width: min-content;
+}
+#container_about .text p {
   font-size: 1.7rem;
   width: 600px;
-  margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+#container_about .text h3 {
+  font-size: 2rem;
+}
+#container_about .text h5 {
+  font-size: 1.7rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#container_about .text ul li {
+  font-size: 1.7rem;
+  margin-left: 20px;
 }
 
 #skill_part {
