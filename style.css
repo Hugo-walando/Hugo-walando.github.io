@@ -273,11 +273,11 @@ main {
 }
 #container_about .text {
   margin: 0 auto;
-  width: min-content;
+  width: auto;
 }
 #container_about .text p {
   font-size: 1.7rem;
-  width: 600px;
+  width: auto;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -656,8 +656,7 @@ footer p span {
     width: 60px;
   }
   .skill_cards {
-    width: 600px;
-    grid-template: 5rem 80px 5rem repeat(2, 80px) 5rem 80px/1fr 1fr 1fr;
+    width: auto;
   }
   .skill_cards .card img {
     width: 60px;
@@ -671,15 +670,23 @@ footer p span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
   }
   .arrows {
     display: none;
+  }
+  .section_title {
+    font-size: 6rem;
   }
 }
 @media screen and (max-width: 650px) {
   main {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  #landing img {
+    width: 200px;
+    height: 200px;
   }
   #top_landing #container_intro h3 {
     font-size: 3rem;
@@ -698,6 +705,23 @@ footer p span {
   #top_landing #container_intro .bold {
     font-weight: 700;
     font-size: 1.4rem;
+  }
+  #container_contact #contact_form {
+    width: auto;
+  }
+  #container_contact #contact_form input {
+    width: auto;
+  }
+  #container_contact #contact_form textarea {
+    width: auto;
+  }
+  #container_contact #contact_form button {
+    width: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section_title {
+    font-size: 4rem;
   }
 }
 @media screen and (max-width: 500px) {
