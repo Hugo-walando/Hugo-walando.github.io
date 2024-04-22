@@ -31,6 +31,7 @@ $arrow-size: 30px;
   color: white;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   border: 0;
@@ -44,7 +45,11 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   position: fixed;
@@ -53,8 +58,14 @@ header {
   background-color: $background;
   border-bottom: 1px solid gray;
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     width: 58%;
     margin-right: 100px;
@@ -84,6 +95,8 @@ header {
   padding: 10px 20px;
   font-size: 1.7rem;
   display: block;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   text-decoration: none;
   i {
@@ -130,11 +143,23 @@ header {
   background-color: white;
   color: $background;
 }
-@keyframes grow-progress {
+@-webkit-keyframes grow-progress {
   from {
+    -webkit-transform: scaleX(0);
     transform: scaleX(0);
   }
   to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes grow-progress {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
 }
@@ -147,7 +172,12 @@ header {
   height: 5px;
   background: $primary-color;
 
+  -webkit-transform-origin: 0 50%;
+
+  -ms-transform-origin: 0 50%;
+
   transform-origin: 0 50%;
+  -webkit-animation: grow-progress auto linear;
   animation: grow-progress auto linear;
   animation-timeline: --page-scroll;
 }
@@ -172,21 +202,34 @@ main {
   margin-right: 100px;
 }
 #landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 100vh;
   img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 }
 
 #top_landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 #container_intro {
@@ -220,17 +263,31 @@ main {
 
   .links {
     margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
   }
 }
 
 .arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   top: 80vh;
@@ -240,15 +297,32 @@ main {
 .scroll-arrow {
   width: $arrow-size;
   height: $arrow-size;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   border-right: 2px solid white;
   border-bottom: 2px solid white;
+  -webkit-animation: arrow-wave 1s infinite;
   animation: arrow-wave 1s infinite;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
+      -webkit-animation-delay: $animation-delay * $i;
       animation-delay: $animation-delay * $i;
     }
+  }
+}
+
+@-webkit-keyframes arrow-wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -308,26 +382,41 @@ main {
 .skill_cards {
   margin: 0 auto;
   width: 800px;
+  display: -ms-grid;
   display: grid;
   grid-template: 6rem 120px 6rem repeat(2, 120px) 6rem 120px / 1fr 1fr 1fr;
   h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-column: 1 / span 3;
     text-align: center;
     font-size: 3rem;
+    -ms-grid-row-align: center;
     align-self: center;
   }
   .card {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     width: 90%;
     margin: 0 auto;
     border: 0px solid $primary-color;
     background: $background-varient;
     height: 90%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-shadow: 0px 4px 8px #0a0a0a;
     box-shadow: 0px 4px 8px #0a0a0a;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     p {
       font-size: 1.7rem;
@@ -338,6 +427,8 @@ main {
     }
   }
   .card:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     width: 100%;
     height: 100%;
@@ -353,10 +444,18 @@ main {
     margin: 0 auto;
     width: 500px;
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     label {
+      -ms-flex-item-align: start;
       align-self: flex-start;
       font-size: 2rem;
     }
@@ -373,6 +472,22 @@ main {
     input:focus {
       border: none;
     }
+    input::-webkit-input-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
+    input::-moz-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
+    input:-ms-input-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
+    input::-ms-input-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
     input::placeholder {
       font-size: 1.7rem;
       opacity: 0.5;
@@ -383,7 +498,9 @@ main {
     input:-webkit-autofill:active {
       -webkit-background-clip: text;
       -webkit-text-fill-color: $primary-color;
+      -webkit-transition: background-color 5000s ease-in-out 0s;
       transition: background-color 5000s ease-in-out 0s;
+      -webkit-box-shadow: inset 0 0 20px 20px #23232329;
       box-shadow: inset 0 0 20px 20px #23232329;
     }
     textarea {
@@ -394,6 +511,22 @@ main {
       color: $primary-color;
       height: 100px;
       padding: 5px;
+    }
+    textarea::-webkit-input-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
+    textarea::-moz-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
+    textarea:-ms-input-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
+    }
+    textarea::-ms-input-placeholder {
+      font-size: 1.7rem;
+      opacity: 0.5;
     }
     textarea::placeholder {
       font-size: 1.7rem;
@@ -424,16 +557,31 @@ main {
 }
 
 .design-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 60vh;
 }
 
 .design {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -441,7 +589,12 @@ main {
   height: auto;
   max-width: 900px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -453,6 +606,8 @@ main {
   border-radius: 5px;
   color: white;
   padding: 1.75rem;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
   transition: 0.4s ease;
   overflow-wrap: break-word;
   margin: 1rem;
@@ -475,7 +630,11 @@ main {
   }
 }
 .structure {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
   margin-top: 5px;
@@ -487,12 +646,14 @@ main {
 
 @media screen and (min-width: 768px) {
   .timeline {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 3px 1fr;
     grid-template-columns: 1fr 3px 1fr;
   }
   .timeline-middle {
     position: relative;
-    // background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+
     background-color: $primary-color;
     width: 3px;
     height: 100%;
@@ -507,10 +668,10 @@ main {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    // background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
     border: 2px solid $primary-color;
     background-color: $background;
     -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -526,17 +687,25 @@ main {
   margin: 0 auto;
   padding: 15px;
   border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
   box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
   img {
+    -webkit-transition: 0.5;
+    -o-transition: 0.5;
     transition: 0.5;
     width: 100%;
     border-radius: 15px;
   }
   img:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
+    -webkit-filter: brightness(0.6);
     filter: brightness(0.6);
   }
   .top_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 10px;
     height: 40%;
@@ -567,8 +736,14 @@ main {
   }
   .card_buttons {
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 10px;
     a {
@@ -596,7 +771,11 @@ footer {
   padding: 35px;
   height: auto;
   .footer_links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
     margin-bottom: 30px;
@@ -625,12 +804,23 @@ footer {
 
 @media screen and (max-width: 1100px) {
   .nav_links {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     right: -100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 30%;
     height: 100vh;
@@ -651,7 +841,6 @@ footer {
     width: 60px;
   }
   .skill_cards {
-    // grid-template: 5rem 80px 80px 5rem 80px 80px 5rem 80px/ 1fr 1fr;
     width: auto;
     .card img {
       width: 60px;
@@ -663,8 +852,15 @@ footer {
     margin-bottom: 30px;
   }
   #top_landing {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 50px;
   }
