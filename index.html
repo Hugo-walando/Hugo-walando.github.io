@@ -5,52 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+          rel="stylesheet" />
     <link rel="icon" href="./favicon/favicon.ico" />
     <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" />
-    <script
-      src="https://kit.fontawesome.com/05e4dc2a7f.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/05e4dc2a7f.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              c_black: "#1e1e1e",
+              c_green: "#17f2b3",
+              c_gray: "#2f2f2f"
+            },
+            fontFamily: {
+              inter: '"Inter", sans-serif',
+            }
+          }
+        }
+      }
+    </script>
     <title>Hugo W</title>
   </head>
-  <body>
-    <header>
-      <a class="logo" href="#landing">HW</a>
-      <nav class="nav_links">
-        <a href="#container_about">À PROPOS</a>
-        <a href="#container_skills">COMPÉTENCES</a>
-        <a href="#container_formations">FORMATIONS</a>
-        <a href="#container_projects">PROJETS</a>
-        <a href="#container_contact">CONTACT</a>
-        <a href="img/hugo.pdf" target="_blank" class="button_link_nav">
-          <i class="icon fa-solid fa-download"></i> CV
-        </a>
+  <body class="bg-c_black font-inter text-white">
+    <header
+            class="h-20 border-b-[1px] border-gray-500 fixed top-0 w-full lg:flex lg:items-center lg:justify-between bg-c_black">
+      <a class="font-bold text-6xl text-c_green ml-12" href="#landing">HW</a>
+      <nav class="w-[800px] text-lg">
+        <a class="ml-5 hover:text-c_green" href="#container_about">À PROPOS</a>
+        <a class="ml-5 hover:text-c_green"
+           href="#container_skills">COMPÉTENCES</a>
+        <a class="ml-5 hover:text-c_green"
+           href="#container_formations">FORMATIONS</a>
+        <a class="ml-5 hover:text-c_green"
+           href="#container_projects">PROJETS</a>
+        <a class="ml-5 hover:text-c_green" href="#container_contact">CONTACT</a>
+        <a class="hover:bg-white ml-5 px-5 font-semibold rounded-lg py-2 bg-c_green text-c_black"
+           href="img/hugo.pdf" target="_blank">
+          <i class="icon fa-solid fa-download"></i> CV </a>
       </nav>
-      <img class="menu" src="img/icons8-menu-96.png" alt="Menu Burger" />
-      <div id="progress"></div>
     </header>
-    <main>
-      <section id="landing">
-        <div id="top_landing">
-          <div id="container_intro">
-            <h3>Bonjour,</h3>
-            <h1>
-              Je suis
-              <span class="green"> Hugo</span>
-              Walandowitsch
-            </h1>
-            <p>
-              Un <span class="bold">développeur front-end</span> qui aime créer
-              des applications web intuitives.
-            </p>
-            <!-- <a
+    <main class="mt-40 mx-32">
+      <section class="">
+        <div>
+          <h3 class="font-bold text-3xl">Bonjour,</h3>
+          <h1 class="font-bold text-5xl"> Je suis <span class="text-c_green">
+              Hugo</span> Walandowitsch </h1>
+          <p> Un <span class="bold">développeur front-end</span> qui aime créer
+            des applications web intuitives. </p>
+        </div>
+        <!-- <a
               href="https://www.linkedin.com/in/hugo-walandowitsch/"
               target="_blank"
               ><i class="link_logo fa-brands fa-linkedin"></i
@@ -58,42 +65,28 @@
             <a href="https://github.com/Hugo-walando" target="_blank"
               ><i class="link_logo fa-brands fa-square-github"></i
             ></a> -->
-            <div class="links">
-              <a href="#container_contact" class="button_link_intro_green"
-                >Me Contacter</a
-              >
-              <a
-                href="./img/hugo.pdf"
-                class="button_link_intro_dark"
-                target="_blank"
-              >
-                <i class="icon fa-solid fa-download"></i> Télécharger mon CV
-              </a>
-              <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
-            </div>
-            <div class="arrows">
-              <div class="scroll-arrow"></div>
-              <div class="scroll-arrow"></div>
-              <div class="scroll-arrow"></div>
-            </div>
-          </div>
-          <img src="./img/P1080003.JPG" alt="Photo Hugo Walandowitsch" />
+        <div class="links">
+          <a href="#container_contact" class="button_link_intro_green">Me
+            Contacter</a>
+          <a href="./img/hugo.pdf" class="button_link_intro_dark"
+             target="_blank">
+            <i class="icon fa-solid fa-download"></i> Télécharger mon CV </a>
+          <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
+        </div>
+        <div class="arrows">
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
+          <div class="scroll-arrow"></div>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_about"
-      >
+      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
+               id="container_about">
         <h1 class="section_title">À PROPOS DE MOI</h1>
         <div class="text">
-          <p>
-            Je suis un développeur web passionné âgé de 21 ans, formé au Wagon
+          <p> Je suis un développeur web passionné âgé de 21 ans, formé au Wagon
             et à Simplon. Avec un an d'expérience dans le domaine, j'ai
             développé une passion pour l'amélioration continue, l'acquisition de
-            nouvelles compétences et la collaboration sur des projets
-          </p>
+            nouvelles compétences et la collaboration sur des projets </p>
           <h3>Compétences Personelles</h3>
           <h5>Je suis quelqu'un qui :</h5>
           <ul>
@@ -105,20 +98,14 @@
           </ul>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_skills"
-      >
+      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
+               id="container_skills">
         <h1 class="section_title">COMPÉTENCES</h1>
         <div class="skill_cards">
           <h2>Frameworks</h2>
           <div class="card">
-            <img
-              src="img/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
-              alt="logo React"
-            />
+            <img src="img/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
+                 alt="logo React" />
             <p>React</p>
           </div>
           <div class="card">
@@ -126,10 +113,8 @@
             <p>Angular</p>
           </div>
           <div class="card">
-            <img
-              src="img/icons8-rails-a-server-side-web-application-framework-written-in-ruby-96.png"
-              alt="logo Rails"
-            />
+            <img src="img/icons8-rails-a-server-side-web-application-framework-written-in-ruby-96.png"
+                 alt="logo Rails" />
             <p>Rails</p>
           </div>
           <h2>Languages</h2>
@@ -146,18 +131,14 @@
             <p>JavaScript</p>
           </div>
           <div class="card">
-            <img
-              src="img/icons8-langage-de-programmation-ruby-96.png"
-              alt="logo Ruby"
-            />
+            <img src="img/icons8-langage-de-programmation-ruby-96.png"
+                 alt="logo Ruby" />
             <p>Ruby</p>
           </div>
           <h2>Outils</h2>
           <div class="card">
-            <img
-              src="img/icons8-code-studio-visuel-2019-96.png"
-              alt="logo VScode"
-            />
+            <img src="img/icons8-code-studio-visuel-2019-96.png"
+                 alt="logo VScode" />
             <p>VS Code</p>
           </div>
           <div class="card">
@@ -166,12 +147,8 @@
           </div>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_formations"
-      >
+      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
+               id="container_formations">
         <h1 class="section_title">FORMATIONS</h1>
         <section class="design-section">
           <div class="timeline">
@@ -182,10 +159,8 @@
             <div class="timeline-component timeline-content">
               <h3>Développeur Front-End</h3>
               <div class="structure">
-                <img
-                  src="https://www.est-ensemble.fr/sites/default/files/styles/large_slider/public/logo_simplon_simple_red1.png?itok=J7wPlX1N"
-                  alt="logo Simplon"
-                />
+                <img src="https://www.est-ensemble.fr/sites/default/files/styles/large_slider/public/logo_simplon_simple_red1.png?itok=J7wPlX1N"
+                     alt="logo Simplon" />
                 <h4>Simplon</h4>
               </div>
               <p>En cours ..</p>
@@ -193,16 +168,12 @@
             <div class="timeline-component timeline-content">
               <h3>Développeur Web</h3>
               <div class="structure">
-                <img
-                  alt="logo Le Wagon"
-                  src="https://d26jy9fbi4q9wx.cloudfront.net/assets/logo-ae2beeecce25d711f577b08deb9adfc6c02b673ed106b8d6c3da0f1721d9da33.svg"
-                />
+                <img alt="logo Le Wagon"
+                     src="https://d26jy9fbi4q9wx.cloudfront.net/assets/logo-ae2beeecce25d711f577b08deb9adfc6c02b673ed106b8d6c3da0f1721d9da33.svg" />
                 <h4>Le Wagon</h4>
               </div>
-              <p>
-                Formation sur le front/back-end sous RubyOnRails. Création,
-                Gestion, Collaboration de projet.
-              </p>
+              <p> Formation sur le front/back-end sous RubyOnRails. Création,
+                Gestion, Collaboration de projet. </p>
             </div>
             <div class="timeline-middle">
               <div class="timeline-circle"></div>
@@ -211,22 +182,16 @@
           </div>
         </section>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_projects"
-      >
+      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
+               id="container_projects">
         <h1 class="section_title">PROJETS</h1>
         <div class="project_card">
           <img src="./img/QuizCulture.png" alt="Project Img" />
           <div class="top_card">
             <div class="card_text">
               <h3>QuizCulture</h3>
-              <p>
-                QuizCulture est une simple application de quiz sur la culture
-                générale avec 3 niveaux.
-              </p>
+              <p> QuizCulture est une simple application de quiz sur la culture
+                générale avec 3 niveaux. </p>
             </div>
             <div class="card_techs">
               <span class="tech">HTML</span>
@@ -236,70 +201,41 @@
             </div>
           </div>
           <div class="card_buttons">
-            <a
-              href="https://github.com/Hugo-walando/QuizCulture"
-              target="_blank"
-              ><i class="fa-solid fa-code"></i> Code Source</a
-            >
-            <a href="https://quizculture-5362f.web.app/" target="_blank"
-              ><i class="fa-solid fa-play"></i> Demo</a
-            >
+            <a href="https://github.com/Hugo-walando/QuizCulture"
+               target="_blank"><i class="fa-solid fa-code"></i> Code Source</a>
+            <a href="https://quizculture-5362f.web.app/" target="_blank"><i
+                 class="fa-solid fa-play"></i> Demo</a>
           </div>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_contact"
-      >
+      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
+               id="container_contact">
         <h1 class="section_title">CONTACT</h1>
-        <form
-          id="contact_form"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="ea3aa204-96df-478f-8f95-4d08e1e15147"
-          />
+        <form id="contact_form" action="https://api.web3forms.com/submit"
+              method="POST">
+          <input type="hidden" name="access_key"
+                 value="ea3aa204-96df-478f-8f95-4d08e1e15147" />
           <label>Nom:</label>
           <input name="name" type="text" required placeholder="Votre Nom .." />
           <label>Email:</label>
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Votre Email .."
-          />
+          <input name="email" type="email" required
+                 placeholder="Votre Email .." />
           <label for="message">Message:</label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Votre Message .."
-          ></textarea>
-          <input
-            type="hidden"
-            name="redirect"
-            value="https://web3forms.com/success"
-          />
+          <textarea name="message" id="message"
+                    placeholder="Votre Message .."></textarea>
+          <input type="hidden" name="redirect"
+                 value="https://web3forms.com/success" />
           <button type="submit">
-            <i class="fa-solid fa-paper-plane"></i> Envoyer
-          </button>
+            <i class="fa-solid fa-paper-plane"></i> Envoyer </button>
         </form>
       </section>
     </main>
     <footer>
       <div class="footer_links">
-        <a
-          href="https://www.linkedin.com/in/hugo-walandowitsch/"
-          target="_blank"
-          ><i class="link_logo fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/Hugo-walando" target="_blank"
-          ><i class="link_logo fa-brands fa-square-github"></i
-        ></a>
+        <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
+           target="_blank"><i class="link_logo fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Hugo-walando" target="_blank"><i
+             class="link_logo fa-brands fa-square-github"></i></a>
       </div>
       <p>Fait par Hugo Walandowitsch <span>2024</span></p>
     </footer>
