@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" />
     <script src="https://kit.fontawesome.com/05e4dc2a7f.js"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="new.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,21 +32,45 @@
     <title>Hugo W</title>
   </head>
   <body class="bg-c_black font-inter text-white">
-    <header
-            class="h-20 border-b-[1px] border-gray-500 fixed top-0 w-full lg:flex lg:items-center lg:justify-between bg-c_black">
-      <a class="font-bold text-6xl text-c_green ml-12" href="#landing">HW</a>
-      <nav class="w-[800px] text-lg">
-        <a class="ml-5 hover:text-c_green" href="#container_about">À PROPOS</a>
-        <a class="ml-5 hover:text-c_green"
-           href="#container_skills">COMPÉTENCES</a>
-        <a class="ml-5 hover:text-c_green"
-           href="#container_formations">FORMATIONS</a>
-        <a class="ml-5 hover:text-c_green"
-           href="#container_projects">PROJETS</a>
-        <a class="ml-5 hover:text-c_green" href="#container_contact">CONTACT</a>
-        <a class="hover:bg-white ml-5 px-5 font-semibold rounded-lg py-2 bg-c_green text-c_black"
-           href="img/hugo.pdf" target="_blank">
-          <i class="icon fa-solid fa-download"></i> CV </a>
+    <header>
+      <nav
+           class="h-20 md:border-b-[1px] border-gray-500 fixed top-0 w-full lg:flex lg:items-center lg:justify-between bg-c_black">
+        <input id="check" type="checkbox" class="hidden">
+        <div
+             class="w-full flex items-center h-full justify-between z-10 bg-c_black">
+          <a class="font-bold text-6xl text-c_green ml-12"
+             href="#landing">HW</a>
+          <label class="md:hidden mr-12" for="check"><i
+               class="fa-solid fa-bars"></i></label>
+        </div>
+        <ul
+            class="md:flex absolute md:static md:border-0 md:p-0 top-[-400px] text-lg nav-list bg-c_black w-full p-5 border-b-[1px] border-gray-500 z-[-1] transition-all ease-in duration-500">
+          <li class="">
+            <a class="ml-5 hover:text-c_green" href="#container_about">À
+              PROPOS</a>
+          </li>
+          <li class="mt-2">
+            <a class="ml-5 hover:text-c_green"
+               href="#container_skills">COMPÉTENCES</a>
+          </li>
+          <li class="mt-2">
+            <a class="ml-5 hover:text-c_green"
+               href="#container_formations">FORMATIONS</a>
+          </li>
+          <li class="mt-2">
+            <a class="ml-5 hover:text-c_green"
+               href="#container_projects">PROJETS</a>
+          </li>
+          <li class="mt-2">
+            <a class="ml-5 hover:text-c_green"
+               href="#container_contact">CONTACT</a>
+          </li>
+          <li class="mt-4">
+            <a class="hover:bg-white ml-5 px-5 font-semibold rounded-lg py-2 bg-c_green text-c_black"
+               href="img/hugo.pdf" target="_blank">
+              <i class="icon fa-solid fa-download"></i> CV </a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="mt-40 mx-5 lg:mx-32">
