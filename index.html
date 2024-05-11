@@ -32,12 +32,14 @@
       }
     </script>
     <title>Hugo W</title>
+    <script defer src="script.js"></script>
   </head>
   <body class="bg-c_black font-inter text-white">
     <header>
       <nav
            class="h-20 lg:border-b-[1px] text-nowrap border-gray-500 fixed top-0 w-full lg:flex md:items-center md:justify-between xl:justify-center bg-c_black">
         <input id="check" type="checkbox" class="hidden">
+        <a class="nav_link hidden active" id="home" href="#home"></a>
         <div class="flex items-center h-full justify-between z-10 bg-c_black">
           <a class="font-bold text-6xl text-c_green ml-12"
              href="#landing">HW</a>
@@ -45,26 +47,26 @@
                class="fa-solid fa-bars"></i></label>
         </div>
         <ul
-            class="sm:flex  sm:text-md md:text-lg  w-full sm:gap-4 md:gap-6 sm:justify-center lg:justify-end lg:mr-12 absolute lg:static lg:border-0 lg:p-0 top-[-300px] sm:top-[0] nav-list bg-c_black lg:w-[1400px] p-5 border-b-[1px] border-gray-500 z-[-1] transition-all ease-in duration-500">
+            class="sm:flex sm:text-md md:text-lg w-full sm:gap-4 md:gap-6 sm:justify-center lg:justify-end lg:mr-12 absolute lg:static lg:border-0 lg:p-0 top-[-300px] sm:top-[0] nav-list bg-c_black lg:w-[1400px] p-5 border-b-[1px] border-gray-500 z-[-1] transition-all ease-in duration-500">
           <li class="">
-            <a class=" ml-7 sm:ml-0 hover:text-c_green"
-               href="#container_about">À PROPOS</a>
+            <a class=" ml-7 sm:ml-0 hover:text-c_green nav_link" href="#about">À
+              PROPOS</a>
           </li>
           <li class="mt-2 sm:mt-0">
-            <a class=" ml-7 sm:ml-0 hover:text-c_green"
-               href="#container_skills">COMPÉTENCES</a>
+            <a class=" ml-7 sm:ml-0 hover:text-c_green nav_link"
+               href="#skills">COMPÉTENCES</a>
           </li>
           <li class="mt-2 sm:mt-0">
-            <a class=" ml-7 sm:ml-0 hover:text-c_green"
-               href="#container_formations">FORMATIONS</a>
+            <a class=" ml-7 sm:ml-0 hover:text-c_green nav_link"
+               href="#formation">FORMATIONS</a>
           </li>
           <li class="mt-2 sm:mt-0">
-            <a class=" ml-7 sm:ml-0 hover:text-c_green"
-               href="#container_projects">PROJETS</a>
+            <a class=" ml-7 sm:ml-0 hover:text-c_green nav_link"
+               href="#project">PROJETS</a>
           </li>
           <li class="mt-2 sm:mt-0">
-            <a class=" ml-7 sm:ml-0 hover:text-c_green"
-               href="#container_contact">CONTACT</a>
+            <a class=" ml-7 sm:ml-0 hover:text-c_green nav_link"
+               href="#contact">CONTACT</a>
           </li>
           <li class="mt-4 sm:mt-0">
             <a class="ml-7 sm:ml-0 hover:bg-white px-5 font-semibold rounded-lg py-2 bg-c_green text-c_black"
@@ -75,8 +77,8 @@
       </nav>
     </header>
     <main class="mx-5 lg:mx-32 h-screen snap-y snap-mandatory overflow-scroll">
-      <section
-               class="mb-40 snap-start snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between">
+      <section class="section mb-40 snap-start snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
+               id="home">
         <div
              class="sm:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
           <h3 class="font-bold text-2xl  sm:text-3xl lg:text-6xl">Bonjour, </h3>
@@ -107,8 +109,8 @@
           </div>
         </div>
       </section>
-      <section
-               class="h-screen mt-40 snap-start snap-always flex flex-col items-center justify-center">
+      <section class="section h-screen snap-start snap-always flex flex-col items-center justify-center"
+               id="about">
         <h1
             class="text-c_green text-4xl md:text-5xl lg:text-7xl text-center font-bold">
           À PROPOS DE MOI </h1>
@@ -134,8 +136,7 @@
                src="./img/IMG_0494.jpg" alt="Photo de Hugo">
         </div>
       </section>
-      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
-               id="container_skills">
+      <section class="section h-screen snap-start snap-always " id="skills">
         <h1 class="section_title">COMPÉTENCES</h1>
         <div class="skill_cards">
           <h2>Frameworks</h2>
@@ -183,8 +184,7 @@
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
-               id="container_formations">
+      <section class="section h-screen snap-start snap-always" id="formation">
         <h1 class="section_title">FORMATIONS</h1>
         <section class="design-section">
           <div class="timeline">
@@ -218,8 +218,7 @@
           </div>
         </section>
       </section>
-      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
-               id="container_projects">
+      <section class="section h-screen snap-start snap-always" id="project">
         <h1 class="section_title">PROJETS</h1>
         <div class="project_card">
           <img src="./img/QuizCulture.png" alt="Project Img" />
@@ -244,8 +243,7 @@
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000"
-               id="container_contact">
+      <section class="section h-screen snap-start snap-always" id="contact">
         <h1 class="section_title">CONTACT</h1>
         <form id="contact_form" action="https://api.web3forms.com/submit"
               method="POST">

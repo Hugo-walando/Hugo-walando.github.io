@@ -1,7 +1,17 @@
-// Navbar
+// -------- Navbar --------
+
 #check:checked ~ .nav-list {
     top: 70px;
 }
+
+.active {
+    color: #17f2b3
+}
+
+// --------x End Navbar x--------
+
+
+// -------- Scroll Bar--------
 
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -14,3 +24,5 @@
     scrollbar-width: none;
     /* Firefox */
 }
+
+// --------x End Scroll Bar x--------
