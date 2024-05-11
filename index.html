@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="!scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,8 +41,7 @@
         <input id="check" type="checkbox" class="hidden">
         <a class="nav_link hidden active" id="home" href="#home"></a>
         <div class="flex items-center h-full justify-between z-10 bg-c_black">
-          <a class="font-bold text-6xl text-c_green ml-12"
-             href="#landing">HW</a>
+          <a class="font-bold text-6xl text-c_green ml-12" href="#home">HW</a>
           <label class="lg:hidden mr-12 text-3xl text-c_green" for="check"><i
                class="fa-solid fa-bars"></i></label>
         </div>
@@ -76,8 +75,9 @@
         </ul>
       </nav>
     </header>
-    <main class="mx-5 lg:mx-32 h-screen snap-y snap-mandatory overflow-scroll">
-      <section class="section mb-40 snap-start snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
+    <main
+          class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide">
+      <section class="section snap-start snap-normal w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
                id="home">
         <div
              class="sm:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
@@ -98,7 +98,7 @@
                   ></a> -->
           <div
                class="mt-5 mx-auto md:mx-0 sm:flex sm:gap-5 max-w-[380px] sm:justify-between">
-            <a href="#container_contact"
+            <a href="#contact"
                class="text-nowrap mt-3 sm:mt-0 text-center block h-min px-4 bg-c_green py-[10px] text-c_black font-bold rounded-xl hover:bg-white">Me
               Contacter</a>
             <a href="./img/cv.pdf"
@@ -109,7 +109,7 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always flex flex-col items-center justify-center"
+      <section class="section h-screen snap-start snap-normal flex flex-col items-center justify-center"
                id="about">
         <h1
             class="text-c_green text-4xl md:text-5xl lg:text-7xl text-center font-bold">
@@ -136,7 +136,7 @@
                src="./img/IMG_0494.jpg" alt="Photo de Hugo">
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always " id="skills">
+      <section class="section h-screen snap-start snap-normal " id="skills">
         <h1 class="section_title">COMPÉTENCES</h1>
         <div class="skill_cards">
           <h2>Frameworks</h2>
@@ -184,7 +184,7 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always" id="formation">
+      <section class="section h-screen snap-start snap-normal" id="formation">
         <h1 class="section_title">FORMATIONS</h1>
         <section class="design-section">
           <div class="timeline">
@@ -218,7 +218,7 @@
           </div>
         </section>
       </section>
-      <section class="section h-screen snap-start snap-always" id="project">
+      <section class="section h-screen snap-start snap-normal" id="project">
         <h1 class="section_title">PROJETS</h1>
         <div class="project_card">
           <img src="./img/QuizCulture.png" alt="Project Img" />
@@ -243,7 +243,7 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always" id="contact">
+      <section class="section h-screen snap-start snap-normal" id="contact">
         <h1 class="section_title">CONTACT</h1>
         <form id="contact_form" action="https://api.web3forms.com/submit"
               method="POST">

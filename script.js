@@ -7,7 +7,7 @@ const mainEl = document.querySelector("main");
 let currentSection = "home";
 mainEl.addEventListener("scroll", () => {
   sectionEls.forEach((sectionEl) => {
-    if (mainEl.scrollTop >= sectionEl.offsetTop) {
+    if (mainEl.scrollTop >= sectionEl.offsetTop - 500) {
       currentSection = sectionEl.id;
     }
   });
@@ -17,6 +17,16 @@ mainEl.addEventListener("scroll", () => {
       document.querySelector(".active").classList.remove("active");
       navLinkEl.classList.add("active");
     }
+  });
+});
+
+mainEl.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  const delta = event.deltaY;
+
+  mainEl.scrollBy({
+    top: delta,
+    behavior: "smooth",
   });
 });
 
