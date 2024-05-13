@@ -7,7 +7,7 @@ const mainEl = document.querySelector("main");
 let currentSection = "home";
 mainEl.addEventListener("scroll", () => {
   sectionEls.forEach((sectionEl) => {
-    if (mainEl.scrollTop >= sectionEl.offsetTop - 300) {
+    if (mainEl.scrollTop >= sectionEl.offsetTop - 500) {
       currentSection = sectionEl.id;
     }
   });
