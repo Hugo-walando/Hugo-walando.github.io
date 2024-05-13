@@ -7,7 +7,7 @@ const mainEl = document.querySelector("main");
 let currentSection = "home";
 mainEl.addEventListener("scroll", () => {
   sectionEls.forEach((sectionEl) => {
-    if (mainEl.scrollTop >= sectionEl.offsetTop - 500) {
+    if (mainEl.scrollTop >= sectionEl.offsetTop - 300) {
       currentSection = sectionEl.id;
     }
   });
@@ -20,14 +20,14 @@ mainEl.addEventListener("scroll", () => {
   });
 });
 
-mainEl.addEventListener("wheel", (event) => {
-  event.preventDefault();
-  const delta = event.deltaY;
+// mainEl.addEventListener("wheel", (event) => {
+//   event.preventDefault();
+//   const delta = event.deltaY;
 
-  mainEl.scrollBy({
-    top: delta,
-    behavior: "smooth",
-  });
-});
+//   mainEl.scrollBy({
+//     top: delta,
+//     behavior: "smooth",
+//   });
+// });
 
 // --------x End Scroll function x--------

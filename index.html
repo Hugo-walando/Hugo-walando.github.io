@@ -76,9 +76,11 @@
         </ul>
       </nav>
     </header>
+    <!-- <main
+          class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
     <main
-          class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide">
-      <section class="section snap-start snap-normal w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
+          class="mx-5 h-screen snap-y snap-mandatory overflow-scroll scroll-smooth scrollbar-hide">
+      <section class="section snap-start snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
                id="home">
         <div
              class="sm:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
@@ -111,13 +113,13 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-normal flex flex-col items-center justify-center"
+      <section class="section h-screen snap-start snap-always flex flex-col items-center justify-center"
                id="about">
         <h1
             class="text-c_green text-4xl md:text-5xl lg:text-7xl text-center font-bold">
           À PROPOS DE MOI </h1>
         <div
-             class="md:flex md:items-center md:justify-between xl:justify-center md:gap-7 mt-20">
+             class="md:flex md:items-center md:justify-between xl:justify-center md:gap-7 mt-12">
           <div class="lg:max-w-[600px]">
             <h2 class="text-4xl font-bold text-c_green text-center">Hugo</h2>
             <p class="text-xl text-gray-300 mt-4 font-light">Je suis <span
@@ -138,9 +140,12 @@
                src="./img/IMG_0494.jpg" alt="Photo de Hugo">
         </div>
       </section>
-      <section class="section h-screen snap-start snap-normal " id="skills">
-        <h1 class="section_title">COMPÉTENCES</h1>
-        <div class="skill_cards">
+      <section class="section h-screen snap-start snap-always flex flex-col justify-center"
+               id="skills">
+        <h1
+            class="text-c_green font-bold text-4xl md:text-5xl lg:text-7xl text-center">
+          MES COMPÉTENCES</h1>
+        <div class="flex">
           <h2>Frameworks</h2>
           <div class="card">
             <img src="img/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
@@ -186,7 +191,7 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-normal" id="formation">
+      <section class="section h-screen snap-start snap-always" id="formation">
         <h1 class="section_title">FORMATIONS</h1>
         <section class="design-section">
           <div class="timeline">
@@ -220,7 +225,7 @@
           </div>
         </section>
       </section>
-      <section class="section h-screen snap-start snap-normal" id="project">
+      <section class="section h-screen snap-start snap-always" id="project">
         <h1 class="section_title">PROJETS</h1>
         <div class="project_card">
           <img src="./img/QuizCulture.png" alt="Project Img" />
@@ -245,7 +250,7 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-normal" id="contact">
+      <section class="section h-screen snap-start snap-always" id="contact">
         <h1 class="section_title">CONTACT</h1>
         <form id="contact_form" action="https://api.web3forms.com/submit"
               method="POST">
@@ -266,17 +271,5 @@
         </form>
       </section>
     </main>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      const menuHamburger = document.querySelector(".menu");
-      const navLinks = document.querySelector(".nav_links");
-
-      menuHamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("mobile-menu");
-      });
-    </script>
   </body>
 </html>
