@@ -84,10 +84,10 @@
       <section class="section xl:snap-start xl:snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
                id="home">
         <div
-             class="sm:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
+             class="md:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
           <h3 class="font-bold text-2xl  sm:text-3xl lg:text-6xl" id="top-link">
             Bonjour, </h3>
-          <h1 class="font-bold text-4xl sm:text-7xl mb-3"> Je suis <span
+          <h1 class="font-bold text-4xl sm:text-7xl mb-3 w-full"> Je suis <span
                   class="font-extrabold text-c_green"> Hugo</span> Walandowitsch
           </h1>
           <p class="text-lg text-gray-300 lg:text-3xl"> Un <span
@@ -104,10 +104,10 @@
           <div
                class="mt-5 mx-auto md:mx-0 sm:flex sm:gap-5 max-w-[380px] sm:justify-between">
             <a href="#contact"
-               class="text-nowrap mt-3 sm:mt-0 text-center block h-min px-4 bg-c_green py-[10px] text-c_black font-bold rounded-xl hover:bg-white">Me
+               class="text-nowrap text-xl mt-3 sm:mt-0 text-center block h-min px-4 bg-c_green py-[10px] text-c_black font-bold rounded-xl hover:bg-white">Me
               Contacter</a>
             <a href="./img/cv.pdf"
-               class="text-nowrap mt-2 sm:mt-0 text-center block h-min px-3 border-2 border-c_green bg-c_black py-[8px] text-c_green font-bold rounded-xl hover:bg-c_green hover:text-c_black"
+               class="text-nowrap text-xl mt-2 sm:mt-0 text-center block h-min px-3 border-2 border-c_green bg-c_black py-[8px] text-c_green font-bold rounded-xl hover:bg-c_green hover:text-c_black"
                target="_blank">
               <i class="icon fa-solid fa-download"></i> Télécharger mon CV </a>
             <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
@@ -209,40 +209,64 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen xl:snap-start xl:snap-always"
+      <section class="section xl:h-screen xl:snap-start xl:snap-always flex flex-col justify-center mt-32"
                id="formation">
-        <h1 class="section_title">FORMATIONS</h1>
-        <section class="design-section">
-          <div class="timeline">
-            <div class="timeline-empty"></div>
-            <div class="timeline-middle">
-              <div class="timeline-circle"></div>
-            </div>
-            <div class="timeline-component timeline-content">
-              <h3>Développeur Front-End</h3>
-              <div class="structure">
-                <img src="https://www.est-ensemble.fr/sites/default/files/styles/large_slider/public/logo_simplon_simple_red1.png?itok=J7wPlX1N"
-                     alt="logo Simplon" />
-                <h4>Simplon</h4>
+        <h1
+            class="text-c_green font-bold text-4xl md:text-5xl lg:text-7xl text-center">
+          MES FORMATIONS</h1>
+        <div class="container max-w-5xl px-4 py-12
+        mx-auto">
+          <div class="grid gap-4 mx-4 sm:grid-cols-12">
+            <div class="col-span-12 sm:col-span-3">
+              <div
+                   class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-violet-600">
+                <h3 class="text-3xl font-semibold">Morbi tempor</h3>
+                <span
+                      class="text-sm font-bold tracking-wider uppercase dark:text-gray-600">Vestibulum
+                  diam nunc</span>
               </div>
-              <p>En cours ..</p>
             </div>
-            <div class="timeline-component timeline-content">
-              <h3>Développeur Web</h3>
-              <div class="structure">
-                <img alt="logo Le Wagon"
-                     src="https://d26jy9fbi4q9wx.cloudfront.net/assets/logo-ae2beeecce25d711f577b08deb9adfc6c02b673ed106b8d6c3da0f1721d9da33.svg" />
-                <h4>Le Wagon</h4>
+            <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+              <div
+                   class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
+                <div
+                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
+                  <h3 class="text-xl font-semibold tracking-wide">Donec porta
+                    enim vel </h3>
+                  <time
+                        class="text-xs tracking-wide uppercase dark:text-gray-600">Dec
+                    2020</time>
+                  <p class="mt-3">Pellentesque feugiat ante at nisl efficitur,
+                    in mollis orci scelerisque. Interdum et malesuada fames ac
+                    ante ipsum primis in faucibus.</p>
+                </div>
+                <div
+                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
+                  <h3 class="text-xl font-semibold tracking-wide">Aliquam sit
+                    amet nunc ut</h3>
+                  <time
+                        class="text-xs tracking-wide uppercase dark:text-gray-600">Jul
+                    2019</time>
+                  <p class="mt-3">Morbi vulputate aliquam libero non dictum.
+                    Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui.
+                    Donec mollis turpis eget egestas sodales.</p>
+                </div>
+                <div
+                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
+                  <h3 class="text-xl font-semibold tracking-wide">Pellentesque
+                    habitant morbi</h3>
+                  <time
+                        class="text-xs tracking-wide uppercase dark:text-gray-600">Jan
+                    2016</time>
+                  <p class="mt-3">Suspendisse tincidunt, arcu nec faucibus
+                    efficitur, justo velit consectetur nisl, sit amet
+                    condimentum lacus orci nec purus. Mauris quis quam suscipit,
+                    vehicula felis id, vehicula enim.</p>
+                </div>
               </div>
-              <p> Formation sur le front/back-end sous RubyOnRails. Création,
-                Gestion, Collaboration de projet. </p>
             </div>
-            <div class="timeline-middle">
-              <div class="timeline-circle"></div>
-            </div>
-            <div class="timeline-empty"></div>
           </div>
-        </section>
+        </div>
       </section>
       <section class="section h-screen xl:snap-start xl:snap-always"
                id="project">
