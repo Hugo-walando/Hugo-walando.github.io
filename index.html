@@ -37,17 +37,18 @@
   <body class="bg-c_black font-inter text-white">
     <header>
       <nav
-           class="h-20 lg:border-b-[1px] text-nowrap border-gray-500 fixed top-0 w-full lg:flex md:items-center md:justify-between xl:justify-center bg-c_black">
+           class="h-20 lg:border-b-[1px] text-nowrap border-gray-500 fixed top-0 w-full lg:flex md:items-center md:justify-between xl:justify-center bg-c_black z-50">
         <input id="check" type="checkbox" class="hidden">
         <a class="nav_link hidden active" id="home" href="#home"></a>
-        <div class="flex items-center h-full justify-between z-10 bg-c_black">
+        <div
+             class="relative flex items-center h-full justify-between z-50 bg-c_black">
           <a class="font-bold text-6xl text-c_green ml-12"
              href="#top-link">HW</a>
           <label class="lg:hidden mr-12 text-3xl text-c_green" for="check"><i
                class="fa-solid fa-bars"></i></label>
         </div>
         <ul
-            class="sm:flex sm:text-md md:text-lg w-full sm:gap-4 md:gap-6 sm:justify-center lg:justify-end lg:mr-12 absolute lg:static lg:border-0 lg:p-0 top-[-300px] sm:top-[0] nav-list bg-c_black lg:w-[1400px] p-5 border-b-[1px] border-gray-500 z-[-1] transition-all ease-in duration-500">
+            class="sm:flex sm:text-md md:text-lg w-full sm:gap-4 md:gap-6 sm:justify-center lg:justify-end lg:mr-12 absolute lg:relative lg:border-0 lg:p-0 top-[-300px] sm:top-[0] nav-list bg-c_black lg:w-[1400px] p-5 border-b-[1px] border-gray-500 z-20 transition-all ease-in duration-500">
           <li class="">
             <a class=" ml-7 sm:ml-0 hover:text-c_green nav_link" href="#about">À
               PROPOS</a>
@@ -79,8 +80,8 @@
     <!-- <main
           class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
     <main
-          class="mx-5 h-screen snap-y snap-mandatory overflow-scroll scroll-smooth scrollbar-hide">
-      <section class="section snap-start snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
+          class="mx-5 h-screen xl:snap-y xl:snap-mandatory xl:overflow-scroll scroll-smooth scrollbar-hide">
+      <section class="section xl:snap-start xl:snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
                id="home">
         <div
              class="sm:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
@@ -113,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always flex flex-col items-center justify-center"
+      <section class="section xl:h-screen xl:snap-start xl:snap-always flex flex-col items-center justify-center"
                id="about">
         <h1
             class="text-c_green text-4xl md:text-5xl lg:text-7xl text-center font-bold">
@@ -140,58 +141,76 @@
                src="./img/IMG_0494.jpg" alt="Photo de Hugo">
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always flex flex-col justify-center"
+      <section class="section xl:h-screen xl:snap-start xl:snap-always flex flex-col justify-center mt-32"
                id="skills">
         <h1
             class="text-c_green font-bold text-4xl md:text-5xl lg:text-7xl text-center">
           MES COMPÉTENCES</h1>
-        <div class="flex">
-          <h2>Frameworks</h2>
-          <div class="card">
+        <div
+             class="flex flex-wrap justify-center md:gap-12 gap-5 max-w-[800px] mt-20 mx-auto">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
                  alt="logo React" />
-            <p>React</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              React</p>
           </div>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-angular-96.png" alt="logo Angular" />
-            <p>Angular</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Angular</p>
           </div>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-rails-a-server-side-web-application-framework-written-in-ruby-96.png"
                  alt="logo Rails" />
-            <p>Rails</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Rails</p>
           </div>
-          <h2>Languages</h2>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-html-96.png" alt="logo HTML" />
-            <p>HTML</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              HTML</p>
           </div>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-css-96.png" alt="logo CSS" />
-            <p>CSS</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              CSS</p>
           </div>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-javascript-96.png" alt="logo Javascript" />
-            <p>JavaScript</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              JavaScript</p>
           </div>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-langage-de-programmation-ruby-96.png"
                  alt="logo Ruby" />
-            <p>Ruby</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Ruby</p>
           </div>
-          <h2>Outils</h2>
-          <div class="card">
-            <img src="img/icons8-code-studio-visuel-2019-96.png"
-                 alt="logo VScode" />
-            <p>VS Code</p>
-          </div>
-          <div class="card">
+          <div
+               class="w-32 bg-c_gray h-40 flex justify-center items-center relative rounded-md">
             <img src="img/icons8-git-96.png" alt="logo Git" />
-            <p>Git</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Git</p>
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always" id="formation">
+      <section class="section h-screen xl:snap-start xl:snap-always"
+               id="formation">
         <h1 class="section_title">FORMATIONS</h1>
         <section class="design-section">
           <div class="timeline">
@@ -225,7 +244,8 @@
           </div>
         </section>
       </section>
-      <section class="section h-screen snap-start snap-always" id="project">
+      <section class="section h-screen xl:snap-start xl:snap-always"
+               id="project">
         <h1 class="section_title">PROJETS</h1>
         <div class="project_card">
           <img src="./img/QuizCulture.png" alt="Project Img" />
@@ -250,7 +270,8 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen snap-start snap-always" id="contact">
+      <section class="section h-screen xl:snap-start xl:snap-always"
+               id="contact">
         <h1 class="section_title">CONTACT</h1>
         <form id="contact_form" action="https://api.web3forms.com/submit"
               method="POST">
