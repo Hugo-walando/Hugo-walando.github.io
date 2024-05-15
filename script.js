@@ -3,11 +3,12 @@
 const navLinkEls = document.querySelectorAll(".nav_link");
 const sectionEls = document.querySelectorAll(".section");
 const mainEl = document.querySelector("main");
+const bodyEl = document.querySelector("body");
 
 let currentSection = "home";
-mainEl.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   sectionEls.forEach((sectionEl) => {
-    if (mainEl.scrollTop >= sectionEl.offsetTop - 500) {
+    if (window.scrollY >= sectionEl.offsetTop - 500) {
       currentSection = sectionEl.id;
     }
   });
