@@ -80,7 +80,18 @@
     <!-- <main
           class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
     <main
-          class="mx-5 h-screen xl:snap-y xl:snap-mandatory xl:overflow-scroll scroll-smooth scrollbar-hide">
+          class="mx-5 md:mx-20 h-screen xl:snap-y xl:snap-mandatory xl:overflow-scroll scroll-smooth scrollbar-hide">
+      <div class="hidden md:block flex flex-col fixed left-8 bottom-0">
+        <a href="https://github.com/Hugo-walando" target="_blank">
+          <i class="block text-c_green text-3xl fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
+           target="_blank">
+          <i
+             class="block text-c_green text-3xl fa-brands fa-linkedin-in mt-2"></i>
+        </a>
+        <div class="bg-c_green w-[2px] h-[120px] mx-auto mt-12"></div>
+      </div>
       <section class="section xl:snap-start xl:snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
                id="home">
         <div
@@ -137,8 +148,10 @@
               train de pratiquer la callisthénie ou de jouer à des jeux vidéo.
             </p>
           </div>
-          <img class=" hidden md:block w-[200px] sm:w-[300px] object-cover rounded-lg"
-               src="./img/IMG_0494.jpg" alt="Photo de Hugo">
+          <div class="hidden md:block border-2 border-c_green rounded-md">
+            <img class="w-[200px] min-w-[200px] sm:w-[300px] object-cover rounded-lg relative bottom-[8px] right-[8px] hover:bottom-[12px] hover:right-[12px] duration-300"
+                 src="./img/IMG_0494.jpg" alt="Photo de Hugo">
+          </div>
         </div>
       </section>
       <section class="section xl:h-screen xl:snap-start xl:snap-always flex flex-col justify-center mt-32"
@@ -219,49 +232,46 @@
           <div class="grid gap-4 mx-4 sm:grid-cols-12">
             <div class="col-span-12 sm:col-span-3">
               <div
-                   class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-violet-600">
-                <h3 class="text-3xl font-semibold">Morbi tempor</h3>
-                <span
-                      class="text-sm font-bold tracking-wider uppercase dark:text-gray-600">Vestibulum
-                  diam nunc</span>
+                   class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-c_green">
+                <h3 class="text-3xl font-semibold">Mon parcours</h3>
               </div>
             </div>
             <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
               <div
                    class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
                 <div
-                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                  <h3 class="text-xl font-semibold tracking-wide">Donec porta
-                    enim vel </h3>
+                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-c_green">
+                  <h3 class="text-xl font-semibold tracking-wide">Développeur
+                    front-end</h3>
                   <time
-                        class="text-xs tracking-wide uppercase dark:text-gray-600">Dec
-                    2020</time>
-                  <p class="mt-3">Pellentesque feugiat ante at nisl efficitur,
-                    in mollis orci scelerisque. Interdum et malesuada fames ac
-                    ante ipsum primis in faucibus.</p>
+                        class="text-xs tracking-wide uppercase dark:text-gray-400">Mai
+                    2024 - Simplon</time>
+                  <p class="mt-3">En cours ..</p>
                 </div>
                 <div
-                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                  <h3 class="text-xl font-semibold tracking-wide">Aliquam sit
-                    amet nunc ut</h3>
+                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-c_green">
+                  <h3 class="text-xl font-semibold tracking-wide">
+                    Développeur-Intégrateur web</h3>
                   <time
-                        class="text-xs tracking-wide uppercase dark:text-gray-600">Jul
-                    2019</time>
-                  <p class="mt-3">Morbi vulputate aliquam libero non dictum.
-                    Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui.
-                    Donec mollis turpis eget egestas sodales.</p>
+                        class="text-xs tracking-wide uppercase dark:text-gray-400">Mars
+                    2024 - Simplon</time>
+                  <p class="mt-3">Création, gestion de projets en équipes
+                    utilisation de Git, Github, HTML, CSS, SASS, Tailwind CSS
+                  </p>
                 </div>
                 <div
-                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                  <h3 class="text-xl font-semibold tracking-wide">Pellentesque
-                    habitant morbi</h3>
+                     class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-c_green">
+                  <h3 class="text-xl font-semibold tracking-wide">Développeur
+                    web</h3>
                   <time
-                        class="text-xs tracking-wide uppercase dark:text-gray-600">Jan
-                    2016</time>
-                  <p class="mt-3">Suspendisse tincidunt, arcu nec faucibus
-                    efficitur, justo velit consectetur nisl, sit amet
-                    condimentum lacus orci nec purus. Mauris quis quam suscipit,
-                    vehicula felis id, vehicula enim.</p>
+                        class="text-xs tracking-wide uppercase dark:text-gray-400">Juin
+                    2023 - Le Wagon</time>
+                  <p class="mt-3">J'ai découvert le monde du développement
+                    durant cette formation. Bootcamp de 9 semaines pour
+                    apprendre HTML, CSS, Bootstrap, JavaScript, Ajax, Figma,
+                    SQL, git, GitHub, Heroku et Ruby on Rails. Conception,
+                    implémentation et mise en production d'un clone d'AirBnB et
+                    d'un prototype Rails de pyp-fishing.com </p>
                 </div>
               </div>
             </div>
