@@ -81,14 +81,14 @@
           class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
     <main class="mx-5 md:mx-20 h-screen" id="top-link">
       <div class="hidden md:block flex flex-col fixed left-8 bottom-0">
-        <a class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-2px]"
+        <a class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px]"
            href="https://github.com/Hugo-walando" target="_blank">
           <i class="fa-brands fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
-           target="_blank">
-          <i
-             class="block text-c_green text-3xl fa-brands fa-linkedin-in mt-2"></i>
+           target="_blank"
+           class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px] mt-2">
+          <i class=" fa-brands fa-linkedin-in"></i>
         </a>
         <div class="bg-c_green w-[2px] h-[120px] mx-auto mt-12"></div>
       </div>
@@ -326,18 +326,28 @@
               method="POST">
           <input type="hidden" name="access_key"
                  value="ea3aa204-96df-478f-8f95-4d08e1e15147" />
-          <label>Nom:</label>
-          <input class="w-full h-10" name="name" type="text" required
-                 placeholder="Votre Nom .." />
-          <label>Email:</label>
-          <input class="w-full h-10" name="email" type="email" required
-                 placeholder="Votre Email .." />
-          <label for="message">Message:</label>
-          <textarea class="w-full h-32" name="message" id="message"
-                    placeholder="Votre Message .."></textarea>
+          <div class="w-full">
+            <label class="text-xl font-bold">Nom:</label>
+            <input class="w-full h-10 bg-c_black border border-gray-300 rounded-lg p-5 mt-3"
+                   name="name" type="text" required
+                   placeholder="Votre Nom .." />
+          </div>
+          <div class="w-full mt-4">
+            <label class="text-xl font-bold">Email:</label>
+            <input class="w-full h-10 bg-c_black border border-gray-300 rounded-lg p-5 mt-3"
+                   name="email" type="email" required
+                   placeholder="Votre Email .." />
+          </div>
+          <div class="w-full mt-4">
+            <label for="message" class="text-xl font-bold">Message:</label>
+            <textarea class="w-full h-32 bg-c_black border border-gray-300 rounded-lg p-5 mt-3"
+                      name="message" id="message"
+                      placeholder="Votre Message .."></textarea>
+          </div>
           <input type="hidden" name="redirect"
                  value="https://web3forms.com/success" />
-          <button type="submit">
+          <button type="submit"
+                  class="py-3 px-5 bg-c_green rounded-lg text-c_black font-bold mt-3 hover:bg-white text-xl">
             <i class="fa-solid fa-paper-plane"></i> Envoyer </button>
         </form>
       </section>
