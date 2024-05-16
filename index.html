@@ -81,8 +81,9 @@
           class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
     <main class="mx-5 md:mx-20 h-screen" id="top-link">
       <div class="hidden md:block flex flex-col fixed left-8 bottom-0">
-        <a href="https://github.com/Hugo-walando" target="_blank">
-          <i class="block text-c_green text-3xl fa-brands fa-github"></i>
+        <a class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-2px]"
+           href="https://github.com/Hugo-walando" target="_blank">
+          <i class="fa-brands fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
            target="_blank">
@@ -228,7 +229,7 @@
       <section class="section h-screen xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
                id="path">
         <div class="container max-w-5xl sm:px-4 mx-auto">
-          <div class="grid gap-4 mx-4 ">
+          <div class=" mx-4 ">
             <div class="col-span-12 ">
               <div
                    class="text-center  mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green mt-16 sm:mt-0">
@@ -305,9 +306,9 @@
               <div class="flex mt-3">
                 <a href="https://github.com/Hugo-walando/QuizCulture"
                    target="_blank"><i
-                     class="fa-brands fa-github text-2xl text-gray-400"></i></a>
+                     class="fa-brands fa-github text-2xl text-gray-400 hover:text-c_green duration-300"></i></a>
                 <a href="https://quizculture-5362f.web.app/" target="_blank"><i
-                     class="fa-solid fa-arrow-up-right-from-square text-2xl text-gray-400 ml-4"></i></a>
+                     class="fa-solid fa-arrow-up-right-from-square text-2xl text-gray-400 ml-4 hover:text-c_green duration-300"></i></a>
               </div>
             </div>
           </div>
@@ -320,17 +321,19 @@
           <h3 class="text-3xl font-semibold"><span class="text-c_green">05.
             </span>Contact</h3>
         </div>
-        <form id="contact_form" action="https://api.web3forms.com/submit"
+        <form class="flex flex-col items-center max-w-[600px] mx-auto"
+              id="contact_form" action="https://api.web3forms.com/submit"
               method="POST">
           <input type="hidden" name="access_key"
                  value="ea3aa204-96df-478f-8f95-4d08e1e15147" />
           <label>Nom:</label>
-          <input name="name" type="text" required placeholder="Votre Nom .." />
+          <input class="w-full h-10" name="name" type="text" required
+                 placeholder="Votre Nom .." />
           <label>Email:</label>
-          <input name="email" type="email" required
+          <input class="w-full h-10" name="email" type="email" required
                  placeholder="Votre Email .." />
           <label for="message">Message:</label>
-          <textarea name="message" id="message"
+          <textarea class="w-full h-32" name="message" id="message"
                     placeholder="Votre Message .."></textarea>
           <input type="hidden" name="redirect"
                  value="https://web3forms.com/success" />
