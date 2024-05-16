@@ -314,33 +314,33 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen xl:snap-start xl:snap-always pt-20 flex flex-col justify-center"
+      <section class="section h-screen xl:snap-start xl:snap-always pt-20 flex flex-col justify-center items-center"
                id="contact">
         <div
              class="text-center  mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green">
           <h3 class="text-3xl font-semibold"><span class="text-c_green">05.
             </span>Contact</h3>
         </div>
-        <form class="flex flex-col items-center max-w-[600px] mx-auto"
+        <form class="flex flex-col items-center w-full lg:max-w-[600px]"
               id="contact_form" action="https://api.web3forms.com/submit"
               method="POST">
           <input type="hidden" name="access_key"
                  value="ea3aa204-96df-478f-8f95-4d08e1e15147" />
           <div class="w-full">
             <label class="text-xl font-bold">Nom:</label>
-            <input class="w-full h-10 bg-c_black border border-gray-300 rounded-lg p-5 mt-3"
+            <input class="w-full h-10 bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:border-0"
                    name="name" type="text" required
                    placeholder="Votre Nom .." />
           </div>
           <div class="w-full mt-4">
             <label class="text-xl font-bold">Email:</label>
-            <input class="w-full h-10 bg-c_black border border-gray-300 rounded-lg p-5 mt-3"
+            <input class="w-full h-10 bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:border-0"
                    name="email" type="email" required
                    placeholder="Votre Email .." />
           </div>
           <div class="w-full mt-4">
             <label for="message" class="text-xl font-bold">Message:</label>
-            <textarea class="w-full h-32 bg-c_black border border-gray-300 rounded-lg p-5 mt-3"
+            <textarea class="w-full h-32 bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:border-0"
                       name="message" id="message"
                       placeholder="Votre Message .."></textarea>
           </div>
