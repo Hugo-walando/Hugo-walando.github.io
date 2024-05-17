@@ -79,7 +79,7 @@
     </header>
     <!-- <main
           class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
-    <main class="mx-5 md:mx-20 h-screen" id="top-link">
+    <main class="mx-5 md:mx-20" id="top-link">
       <div class="hidden md:block flex flex-col fixed left-8 bottom-0">
         <a class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px]"
            href="https://github.com/Hugo-walando" target="_blank">
@@ -125,7 +125,7 @@
           </div>
         </div>
       </section>
-      <section class="section xl:h-screen xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
+      <section class="section xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
                id="about">
         <div
              class="text-center  mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green">
@@ -156,10 +156,10 @@
           </div>
         </div>
       </section>
-      <section class="section xl:h-screen xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
+      <section class="section xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
                id="skills">
         <div
-             class="text-center  mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green">
+             class="text-center mt-12 mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green">
           <h3 class="text-3xl font-semibold"><span class="text-c_green">02.
             </span>Mes Compétences</h3>
         </div>
@@ -226,9 +226,9 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
+      <section class="section xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
                id="path">
-        <div class="container max-w-5xl sm:px-4 mx-auto">
+        <div class="container sm:mt-12 max-w-5xl sm:px-4 mx-auto">
           <div class=" mx-4 ">
             <div class="col-span-12 ">
               <div
@@ -279,10 +279,10 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen xl:snap-start xl:snap-always pt-20 flex flex-col justify-center"
+      <section class="section xl:snap-start xl:snap-always pt-20 flex flex-col justify-center"
                id="project">
         <div
-             class="text-center before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green mt-12 sm:mt-0">
+             class="text-center sm:mt-12 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green mt-12 sm:mt-0">
           <h3 class="text-3xl font-semibold "><span class="text-c_green">04.
             </span>Mes Projets</h3>
         </div>
@@ -314,11 +314,11 @@
           </div>
         </div>
       </section>
-      <section class="section h-screen xl:snap-start xl:snap-always pt-20 flex flex-col justify-center items-center"
+      <section class="section xl:snap-start xl:snap-always pt-20 flex flex-col justify-center items-center"
                id="contact">
         <div
-             class="text-center  mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green">
-          <h3 class="text-3xl font-semibold"><span class="text-c_green">05.
+             class="text-center sm:mt-12 mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green">
+          <h3 class="text-3xl font-semibold "><span class="text-c_green">05.
             </span>Contact</h3>
         </div>
         <form class="flex flex-col items-center w-full lg:max-w-[600px]"
@@ -328,19 +328,19 @@
                  value="ea3aa204-96df-478f-8f95-4d08e1e15147" />
           <div class="w-full">
             <label class="text-xl font-bold" for="name">Nom:</label>
-            <input class="w-full h-10 text-xl bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:outline-none "
+            <input class="w-full h-10 text-xl bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:outline-none focus:border-white"
                    name="name" type="text" required
                    placeholder="Votre Nom .." />
           </div>
           <div class="w-full mt-4">
             <label class="text-xl font-bold" for="email">Email:</label>
-            <input class="w-full h-10 text-xl bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:outline-none autofill:bg-c_black"
+            <input class="w-full h-10 text-xl bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:outline-none focus:border-white"
                    name="email" type="email" required
                    placeholder="Votre Email .." />
           </div>
           <div class="w-full mt-4">
             <label for="message" class="text-xl font-bold">Message:</label>
-            <textarea class="w-full text-xl h-32 bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:outline-none"
+            <textarea class="w-full text-xl h-32 bg-c_black border border-gray-300 rounded-lg p-5 mt-3 focus:outline-none focus:border-white"
                       name="message" id="message"
                       placeholder="Votre Message .."></textarea>
           </div>
@@ -352,5 +352,8 @@
         </form>
       </section>
     </main>
+    <footer class="text-center w-full p-5">
+      <h5 class="text-xl text-gray-200">Fait en 2024 - Hugo Walandowitsch</h5>
+    </footer>
   </body>
 </html>
