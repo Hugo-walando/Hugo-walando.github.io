@@ -33,6 +33,7 @@
     </script>
     <title>Hugo W</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="bg-c_black font-inter text-white !scroll-smooth">
     <header>
@@ -96,12 +97,15 @@
                id="home">
         <div
              class="md:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
-          <h3 class="font-bold text-2xl  sm:text-3xl lg:text-6xl"> Bonjour,
-          </h3>
-          <h1 class="font-bold text-4xl sm:text-7xl mb-3 w-full"> Je suis <span
-                  class="font-extrabold text-c_green"> Hugo</span> Walandowitsch
-          </h1>
-          <p class="text-lg text-gray-300 lg:text-3xl"> Un <span
+          <h3 class="font-bold text-2xl  sm:text-3xl lg:text-6xl"
+              data-aos="fade-right" data-aos-easing="ease" data-aos-delay="400">
+            Bonjour, </h3>
+          <h1 class="font-bold text-4xl sm:text-7xl mb-3 w-full"
+              data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800">
+            Je suis <span class="font-extrabold text-c_green"> Hugo</span>
+            Walandowitsch </h1>
+          <p class="text-lg text-gray-300 lg:text-3xl" data-aos="fade-right"
+             data-aos-easing="ease" data-aos-delay="1200"> Un <span
                   class="font-bold text-white">développeur front-end</span> qui
             aime créer des applications web intuitives. </p>
           <!-- <a
@@ -112,8 +116,9 @@
                 <a href="https://github.com/Hugo-walando" target="_blank"
                 ><i class="link_logo fa-brands fa-square-github"></i
                   ></a> -->
-          <div
-               class="mt-5 mx-auto md:mx-0 sm:flex sm:gap-5 max-w-[380px] sm:justify-between">
+          <div class="mt-5 mx-auto md:mx-0 sm:flex sm:gap-5 max-w-[380px] sm:justify-between"
+               data-aos="fade-right" data-aos-easing="ease"
+               data-aos-delay="1600">
             <a href="#contact"
                class="text-nowrap text-xl mt-3 sm:mt-0 text-center block h-min sm:px-4 bg-c_green py-[10px] text-c_black font-bold rounded-xl hover:bg-white">Me
               Contacter</a>
@@ -366,5 +371,9 @@
       </div>
       <h5 class="text-xl text-gray-200">Fait en 2024 - Hugo Walandowitsch</h5>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
