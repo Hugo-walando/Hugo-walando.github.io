@@ -1,319 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="!scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+          rel="stylesheet" />
     <link rel="icon" href="./favicon/favicon.ico" />
     <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" />
-    <script
-      src="https://kit.fontawesome.com/05e4dc2a7f.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/05e4dc2a7f.js"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="new.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              c_black: "#1e1e1e",
+              c_green: "#17f2b3",
+              c_gray: "#2f2f2f"
+            },
+            fontFamily: {
+              inter: '"Inter", sans-serif',
+            }
+
+          }
+        }
+
+      }
+    </script>
     <title>Hugo W</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-  <body>
+  <body class="bg-c_black font-inter text-white !scroll-smooth">
     <header>
-      <a class="logo" href="#landing">HW</a>
-      <nav class="nav_links">
-        <a href="#container_about">À PROPOS</a>
-        <a href="#container_skills">COMPÉTENCES</a>
-        <a href="#container_formations">FORMATIONS</a>
-        <a href="#container_projects">PROJETS</a>
-        <a href="#container_contact">CONTACT</a>
-        <a href="img/hugo.pdf" target="_blank" class="button_link_nav">
-          <i class="icon fa-solid fa-download"></i> CV
-        </a>
+      <nav
+           class="h-20 lg:border-b-[1px] text-nowrap border-gray-500 fixed top-0 w-full lg:flex md:items-center md:justify-between xl:justify-center bg-c_black z-50">
+        <input id="check" type="checkbox" class="hidden">
+        <a class="nav_link hidden active" id="home" href="#home"></a>
+        <div
+             class="relative flex items-center h-full justify-between z-50 bg-c_black">
+          <a class="font-bold text-6xl text-c_green ml-12"
+             href="#top-link">HW</a>
+          <label class="lg:hidden mr-12 text-3xl text-c_green" for="check"><i
+               class="fa-solid fa-bars"></i></label>
+        </div>
+        <ul
+            class="sm:flex sm:text-md md:text-lg w-full sm:gap-4 md:gap-6 sm:justify-center lg:justify-end lg:mr-12 absolute lg:relative lg:border-0 lg:p-0 top-[-300px] sm:top-[0] nav-list bg-c_black lg:w-[1400px] p-5 border-b-[1px] border-gray-500 z-20 transition-all ease-in duration-500">
+          <li class="">
+            <a class=" ml-7 sm:ml-0 lg:hover:text-c_green nav_link"
+               href="#about">À PROPOS</a>
+          </li>
+          <li class="mt-2 sm:mt-0">
+            <a class=" ml-7 sm:ml-0 lg:hover:text-c_green nav_link"
+               href="#skills">COMPÉTENCES</a>
+          </li>
+          <li class="mt-2 sm:mt-0">
+            <a class=" ml-7 sm:ml-0 lg:hover:text-c_green nav_link"
+               href="#path">PARCOURS</a>
+          </li>
+          <li class="mt-2 sm:mt-0">
+            <a class=" ml-7 sm:ml-0 lg:hover:text-c_green nav_link"
+               href="#project">PROJETS</a>
+          </li>
+          <li class="mt-2 sm:mt-0">
+            <a class=" ml-7 sm:ml-0 lg:hover:text-c_green nav_link"
+               href="#contact">CONTACT</a>
+          </li>
+          <li class="mt-4 sm:mt-0">
+            <a class="ml-7 sm:ml-0 hover:bg-white px-5 font-semibold rounded-lg py-2 bg-c_green text-c_black"
+               href="./img/cv.pdf" target="_blank">
+              <i class="icon fa-solid fa-download"></i> CV </a>
+          </li>
+        </ul>
       </nav>
-      <img class="menu" src="img/icons8-menu-96.png" alt="Menu Burger" />
-      <div id="progress"></div>
     </header>
-    <main>
-      <section id="landing">
-        <div id="top_landing">
-          <div id="container_intro">
-            <h3>Bonjour,</h3>
-            <h1>
-              Je suis
-              <span class="green"> Hugo</span>
-              Walandowitsch
-            </h1>
-            <p>
-              Un <span class="bold">développeur front-end</span> qui aime créer
-              des applications web intuitives.
-            </p>
-            <!-- <a
+    <!-- <main
+          class="mx-5 h-screen snap-y snap-mandatory overflow-scroll !scroll-smooth scrollbar-hide"> -->
+    <main class="mx-5 md:mx-20" id="top-link">
+      <div class="hidden md:block flex flex-col fixed left-8 bottom-0">
+        <a class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px]"
+           href="https://github.com/Hugo-walando" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
+           target="_blank"
+           class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px] mt-2">
+          <i class=" fa-brands fa-linkedin-in"></i>
+        </a>
+        <div class="bg-c_green w-[2px] h-[120px] mx-auto mt-12"></div>
+      </div>
+      <section class="section xl:snap-start xl:snap-always w-full lg:max-w-[1400px] lg:mx-auto h-screen flex flex-col justify-center gap-7 items-center md:flex-row md:items-center md:justify-between"
+               id="home">
+        <div
+             class="md:w-9/12 sm:mx-auto lg:mx-0 lg:w-full text-center md:text-start">
+          <h3 class="font-bold text-2xl  sm:text-3xl lg:text-6xl"
+              data-aos="fade-right" data-aos-easing="ease" data-aos-delay="400">
+            Bonjour, </h3>
+          <h1 class="font-bold text-4xl sm:text-7xl mb-3 w-full"
+              data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800">
+            Je suis <span class="font-extrabold text-c_green"> Hugo</span>
+            Walandowitsch </h1>
+          <p class="text-lg text-gray-300 lg:text-3xl" data-aos="fade-right"
+             data-aos-easing="ease" data-aos-delay="1200"> Un <span
+                  class="font-bold text-white">développeur front-end</span> qui
+            aime créer des applications web intuitives. </p>
+          <!-- <a
               href="https://www.linkedin.com/in/hugo-walandowitsch/"
               target="_blank"
               ><i class="link_logo fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://github.com/Hugo-walando" target="_blank"
-              ><i class="link_logo fa-brands fa-square-github"></i
-            ></a> -->
-            <div class="links">
-              <a href="#container_contact" class="button_link_intro_green"
-                >Me Contacter</a
-              >
-              <a
-                href="./img/hugo.pdf"
-                class="button_link_intro_dark"
-                target="_blank"
-              >
-                <i class="icon fa-solid fa-download"></i> Télécharger mon CV
-              </a>
-              <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
-            </div>
-            <div class="arrows">
-              <div class="scroll-arrow"></div>
-              <div class="scroll-arrow"></div>
-              <div class="scroll-arrow"></div>
-            </div>
+                ></a>
+                <a href="https://github.com/Hugo-walando" target="_blank"
+                ><i class="link_logo fa-brands fa-square-github"></i
+                  ></a> -->
+          <div class="mt-5 mx-auto md:mx-0 sm:flex sm:gap-5 max-w-[380px] sm:justify-between"
+               data-aos="fade-right" data-aos-easing="ease"
+               data-aos-delay="1600">
+            <a href="#contact"
+               class="text-nowrap text-xl mt-3 sm:mt-0 text-center block h-min sm:px-4 bg-c_green py-[10px] text-c_black font-bold rounded-xl hover:bg-white">Me
+              Contacter</a>
+            <a href="./img/cv.pdf"
+               class="text-nowrap text-xl mt-2 sm:mt-0 text-center block h-min px-3 border-2 border-c_green bg-c_black py-[8px] text-c_green font-bold rounded-xl hover:bg-c_green hover:text-c_black"
+               target="_blank">
+              <i class="icon fa-solid fa-download"></i> Télécharger mon CV </a>
+            <!-- <a href="mailto:hugowalando@gmail.com"><i class="fa-solid fa-envelope"></i></a> -->
           </div>
-          <img src="./img/P1080003.JPG" alt="Photo Hugo Walandowitsch" />
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_about"
-      >
-        <h1 class="section_title">À PROPOS DE MOI</h1>
-        <div class="text">
-          <p>
-            Je suis un développeur web passionné âgé de 21 ans, formé au Wagon
-            et à Simplon. Avec un an d'expérience dans le domaine, j'ai
-            développé une passion pour l'amélioration continue, l'acquisition de
-            nouvelles compétences et la collaboration sur des projets
-          </p>
-          <h3>Compétences Personelles</h3>
-          <h5>Je suis quelqu'un qui :</h5>
-          <ul>
-            <li>Est Persévérant</li>
-            <li>Recherche les meilleurs pratiques</li>
-            <li>Aime résoudre des problèmes</li>
-            <li>Apprend vite</li>
-            <li>Travail facilement en équipe</li>
-          </ul>
+      <section class="section xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
+               id="about">
+        <div class="text-center mt-12 mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green"
+             data-aos="fade-up" data-aos-easing="ease" data-aos-delay="200">
+          <h3 class="text-3xl font-semibold"><span class="text-c_green">01.
+            </span>À Propos de moi</h3>
+        </div>
+        <div
+             class="md:flex md:items-center md:justify-between xl:justify-center md:gap-7 mt-5 sm:mt-12">
+          <div class="lg:max-w-[600px]">
+            <h2 class="text-4xl font-bold text-c_green text-left"
+                data-aos="fade-right" data-aos-easing="ease"
+                data-aos-delay="200">Hugo</h2>
+            <p class="text-xl text-gray-300 mt-7 font-light"
+               data-aos="fade-right" data-aos-easing="ease"
+               data-aos-delay="600">Je suis <span class="font-bold">Hugo
+                Walandowitsch</span> un développeur web front-end de 21 ans.</p>
+            <p class="text-xl text-gray-300 mt-4 font-light"
+               data-aos="fade-right" data-aos-easing="ease"
+               data-aos-delay="800"> Ayant un parcours atypique, je suis passé
+              du monde de l'e-sport à celui du développement web.</p>
+            <p class="text-xl text-gray-300 mt-4 font-light"
+               data-aos="fade-right" data-aos-easing="ease"
+               data-aos-delay="1000">Je m'efforce chaque jour de progresser dans
+              mes domaines et je consacre mon temps libre à la création de
+              projets personnels.</p>
+            <p class="text-xl text-gray-300 mt-4 font-light"
+               data-aos="fade-right" data-aos-easing="ease"
+               data-aos-delay="1200">En dehors de mes activités de
+              développement, vous me trouverez probablement en train de
+              pratiquer la callisthénie ou de jouer à des jeux vidéo. </p>
+          </div>
+          <div class="hidden md:block border-2 border-c_green rounded-md"
+               data-aos="fade-left" data-aos-easing="ease" data-aos-delay="400">
+            <img class="w-[200px] min-w-[200px] sm:w-[300px] object-cover rounded-lg relative bottom-[8px] right-[8px] hover:bottom-[12px] hover:right-[12px] duration-300"
+                 src="./img/IMG_0494.jpg" alt="Photo de Hugo">
+          </div>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_skills"
-      >
-        <h1 class="section_title">COMPÉTENCES</h1>
-        <div class="skill_cards">
-          <h2>Frameworks</h2>
-          <div class="card">
-            <img
-              src="img/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
-              alt="logo React"
-            />
-            <p>React</p>
+      <section class="section xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
+               id="skills">
+        <div class="text-center mt-12 mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green"
+             data-aos="fade-up" data-aos-easing="ease" data-aos-delay="200">
+          <h3 class="text-3xl font-semibold"><span class="text-c_green">02.
+            </span>Mes Compétences</h3>
+        </div>
+        <div
+             class="flex flex-wrap justify-center md:gap-12 gap-5 max-w-[800px] mx-auto">
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
+            <img src="img/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
+                 alt="logo React" />
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              React</p>
           </div>
-          <div class="card">
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
             <img src="img/icons8-angular-96.png" alt="logo Angular" />
-            <p>Angular</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Angular</p>
           </div>
-          <div class="card">
-            <img
-              src="img/icons8-rails-a-server-side-web-application-framework-written-in-ruby-96.png"
-              alt="logo Rails"
-            />
-            <p>Rails</p>
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
+            <img src="img/icons8-rails-a-server-side-web-application-framework-written-in-ruby-96.png"
+                 alt="logo Rails" />
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Rails</p>
           </div>
-          <h2>Languages</h2>
-          <div class="card">
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
             <img src="img/icons8-html-96.png" alt="logo HTML" />
-            <p>HTML</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              HTML</p>
           </div>
-          <div class="card">
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
             <img src="img/icons8-css-96.png" alt="logo CSS" />
-            <p>CSS</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              CSS</p>
           </div>
-          <div class="card">
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
             <img src="img/icons8-javascript-96.png" alt="logo Javascript" />
-            <p>JavaScript</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              JavaScript</p>
           </div>
-          <div class="card">
-            <img
-              src="img/icons8-langage-de-programmation-ruby-96.png"
-              alt="logo Ruby"
-            />
-            <p>Ruby</p>
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
+            <img src="img/icons8-langage-de-programmation-ruby-96.png"
+                 alt="logo Ruby" />
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Ruby</p>
           </div>
-          <h2>Outils</h2>
-          <div class="card">
-            <img
-              src="img/icons8-code-studio-visuel-2019-96.png"
-              alt="logo VScode"
-            />
-            <p>VS Code</p>
-          </div>
-          <div class="card">
+          <div class="w-32 border-gray-600 border h-40 flex justify-center items-center relative rounded-md"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
             <img src="img/icons8-git-96.png" alt="logo Git" />
-            <p>Git</p>
+            <p
+               class="opacity-0 absolute inset-0 hover:opacity-100 z-10 flex justify-center items-center duration-500 bg-black/75 rounded-md font-bold text-xl">
+              Git</p>
           </div>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_formations"
-      >
-        <h1 class="section_title">FORMATIONS</h1>
-        <section class="design-section">
-          <div class="timeline">
-            <div class="timeline-empty"></div>
-            <div class="timeline-middle">
-              <div class="timeline-circle"></div>
-            </div>
-            <div class="timeline-component timeline-content">
-              <h3>Développeur Front-End</h3>
-              <div class="structure">
-                <img
-                  src="https://www.est-ensemble.fr/sites/default/files/styles/large_slider/public/logo_simplon_simple_red1.png?itok=J7wPlX1N"
-                  alt="logo Simplon"
-                />
-                <h4>Simplon</h4>
+      <section class="section xl:snap-start xl:snap-always flex flex-col justify-center pt-20"
+               id="path">
+        <div class="container sm:mt-12 max-w-5xl sm:px-4 mx-auto">
+          <div class=" mx-4 ">
+            <div class="col-span-12 ">
+              <div class="text-center  mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green mt-16 sm:mt-0"
+                   data-aos="fade-up" data-aos-easing="ease"
+                   data-aos-delay="200">
+                <h3 class="text-3xl font-semibold"><span
+                        class="text-c_green">03. </span>Mon parcours</h3>
               </div>
-              <p>En cours ..</p>
             </div>
-            <div class="timeline-component timeline-content">
-              <h3>Développeur Web</h3>
-              <div class="structure">
-                <img
-                  alt="logo Le Wagon"
-                  src="https://d26jy9fbi4q9wx.cloudfront.net/assets/logo-ae2beeecce25d711f577b08deb9adfc6c02b673ed106b8d6c3da0f1721d9da33.svg"
-                />
-                <h4>Le Wagon</h4>
+            <div class="relative col-span-12 sm:px-4 space-y-6 sm:col-span-9"
+                 data-aos="fade-right" data-aos-easing="ease"
+                 data-aos-delay="200">
+              <div
+                   class="col-span-12 space-y-12 relative px-4 col-span-8 space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:dark:bg-gray-300">
+                <div
+                     class="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-c_green">
+                  <h3 class="text-xl font-semibold tracking-wide">Développeur
+                    front-end</h3>
+                  <time
+                        class="text-xs tracking-wide uppercase dark:text-gray-400">Mai
+                    2024 - Simplon</time>
+                  <p class="mt-3 text-gray-300 ">En cours ..</p>
+                </div>
+                <div
+                     class="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-c_green">
+                  <h3 class="text-xl font-semibold tracking-wide">
+                    Développeur-Intégrateur web</h3>
+                  <time
+                        class="text-xs tracking-wide uppercase dark:text-gray-400">Mars
+                    2024 - Simplon</time>
+                  <p class="mt-3 text-gray-300 ">Création, gestion de projets en
+                    équipe, utilisation de Git, Github, HTML, CSS, SASS,
+                    Tailwind CSS </p>
+                </div>
+                <div
+                     class="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-c_green">
+                  <h3 class="text-xl font-semibold tracking-wide">Développeur
+                    web</h3>
+                  <time
+                        class="text-xs tracking-wide uppercase dark:text-gray-400">Juin
+                    2023 - Le Wagon</time>
+                  <p class="mt-3 text-gray-300 ">J'ai découvert le monde du
+                    développement durant cette formation. Bootcamp de 9 semaines
+                    pour apprendre HTML, CSS, Bootstrap, JavaScript, Ajax,
+                    Figma, SQL, git, GitHub, Heroku et Ruby on Rails.
+                    Conception, implémentation et mise en production d'un clone
+                    d'AirBnB et d'un projet imaginé de 0</p>
+                </div>
               </div>
-              <p>
-                Formation sur le front/back-end sous RubyOnRails. Création,
-                Gestion, Collaboration de projet.
-              </p>
             </div>
-            <div class="timeline-middle">
-              <div class="timeline-circle"></div>
-            </div>
-            <div class="timeline-empty"></div>
-          </div>
-        </section>
-      </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_projects"
-      >
-        <h1 class="section_title">PROJETS</h1>
-        <div class="project_card">
-          <img src="./img/QuizCulture.png" alt="Project Img" />
-          <div class="top_card">
-            <div class="card_text">
-              <h3>QuizCulture</h3>
-              <p>
-                QuizCulture est une simple application de quiz sur la culture
-                générale avec 3 niveaux.
-              </p>
-            </div>
-            <div class="card_techs">
-              <span class="tech">HTML</span>
-              <span class="tech">CSS</span>
-              <span class="tech">JavaScript</span>
-              <span class="tech">React</span>
-            </div>
-          </div>
-          <div class="card_buttons">
-            <a
-              href="https://github.com/Hugo-walando/QuizCulture"
-              target="_blank"
-              ><i class="fa-solid fa-code"></i> Code Source</a
-            >
-            <a href="https://quizculture-5362f.web.app/" target="_blank"
-              ><i class="fa-solid fa-play"></i> Demo</a
-            >
           </div>
         </div>
       </section>
-      <section
-        data-aos="fade-up"
-        data-aos-delay="350"
-        data-aos-duration="1000"
-        id="container_contact"
-      >
-        <h1 class="section_title">CONTACT</h1>
-        <form
-          id="contact_form"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="ea3aa204-96df-478f-8f95-4d08e1e15147"
-          />
-          <label>Nom:</label>
-          <input name="name" type="text" required placeholder="Votre Nom .." />
-          <label>Email:</label>
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Votre Email .."
-          />
-          <label for="message">Message:</label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Votre Message .."
-          ></textarea>
-          <input
-            type="hidden"
-            name="redirect"
-            value="https://web3forms.com/success"
-          />
-          <button type="submit">
-            <i class="fa-solid fa-paper-plane"></i> Envoyer
-          </button>
+      <section class="section xl:snap-start xl:snap-always pt-20 flex flex-col justify-center"
+               id="project">
+        <div class="text-center sm:mt-12 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green mt-12 sm:mt-0"
+             data-aos="fade-up" data-aos-easing="ease" data-aos-delay="200">
+          <h3 class="text-3xl font-semibold "><span class="text-c_green">04.
+            </span>Mes Projets</h3>
+        </div>
+        <div class="flex flex-wrap justify-center mt-12">
+          <div class="max-w-sm border border-gray-600 rounded-lg shadow overflow-hidden scale-150"
+               data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="200">
+            <a href="https://quizculture-5362f.web.app/" target="_blank">
+              <img class="w-[400px] object-cover" src="./img/QuizCulture.png"
+                   alt="Projet 1">
+            </a>
+            <div class="p-5">
+              <a href="https://quizculture-5362f.web.app/" target="_blank">
+                <h5 class="font-bold text-2xl">QuizCulture</h5>
+              </a>
+              <p class="mt-2 text-gray-300 ">Quiz sur la culture générale</p>
+              <div class="flex mt-3">
+                <p class=" text-c_green"><i class="fa-brands fa-react"></i>
+                  React</p>
+                <p class="ml-3 text-c_green">Firebase</p>
+              </div>
+              <div class="flex mt-3">
+                <a href="https://github.com/Hugo-walando/QuizCulture"
+                   target="_blank"><i
+                     class="fa-brands fa-github text-2xl text-gray-400 hover:text-c_green duration-300"></i></a>
+                <a href="https://quizculture-5362f.web.app/" target="_blank"><i
+                     class="fa-solid fa-arrow-up-right-from-square text-2xl text-gray-400 ml-4 hover:text-c_green duration-300"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section xl:snap-start xl:snap-always pt-20 flex flex-col justify-center items-center"
+               id="contact">
+        <div class="text-center sm:mt-12 mb-14 before:block before:w-24 before:h-3 before:mb-1 before:rounded-md before:mx-auto before:bg-c_green"
+             data-aos="fade-up" data-aos-easing="ease" data-aos-delay="200">
+          <h3 class="text-3xl font-semibold "><span class="text-c_green">05.
+            </span>Contact</h3>
+        </div>
+        <form class="flex flex-col items-center w-full lg:max-w-[600px]"
+              id="contact_form" action="https://api.web3forms.com/submit"
+              method="POST" data-aos="fade-up" data-aos-easing="ease"
+              data-aos-delay="200">
+          <input type="hidden" name="access_key"
+                 value="ea3aa204-96df-478f-8f95-4d08e1e15147" />
+          <div class="w-full">
+            <label class="text-xl font-bold" for="name">Nom:</label>
+            <input class="w-full h-10 text-xl bg-c_black border border-gray-300 rounded-lg p-5 mt-1 focus:outline-none focus:border-white"
+                   name="name" type="text" required
+                   placeholder="Votre Nom .." />
+          </div>
+          <div class="w-full mt-4">
+            <label class="text-xl font-bold" for="email">Email:</label>
+            <input class="w-full h-10 text-xl bg-c_black border border-gray-300 rounded-lg p-5 mt-1 focus:outline-none focus:border-white"
+                   name="email" type="email" required
+                   placeholder="Votre Email .." />
+          </div>
+          <div class="w-full mt-4">
+            <label for="message" class="text-xl font-bold">Message:</label>
+            <textarea class="w-full text-xl h-32 bg-c_black border border-gray-300 rounded-lg p-5 mt-1 focus:outline-none focus:border-white"
+                      name="message" id="message"
+                      placeholder="Votre Message .."></textarea>
+          </div>
+          <input type="hidden" name="redirect"
+                 value="https://web3forms.com/success" />
+          <button type="submit"
+                  class="py-3 px-5 bg-c_green rounded-lg text-c_black font-bold mt-3 hover:bg-white text-xl">
+            <i class="fa-solid fa-paper-plane"></i> Envoyer </button>
         </form>
       </section>
     </main>
-    <footer>
-      <div class="footer_links">
-        <a
-          href="https://www.linkedin.com/in/hugo-walandowitsch/"
-          target="_blank"
-          ><i class="link_logo fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/Hugo-walando" target="_blank"
-          ><i class="link_logo fa-brands fa-square-github"></i
-        ></a>
+    <footer class="text-center w-full p-5 mt-20">
+      <div class="md:hidden w-full flex justify-center gap-4 my-2">
+        <a class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px]"
+           href="https://github.com/Hugo-walando" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hugo-walandowitsch/"
+           target="_blank"
+           class="block text-c_green transition-all duration-300 ease-in-out text-3xl relative hover:translate-y-[-4px]">
+          <i class=" fa-brands fa-linkedin-in"></i>
+        </a>
       </div>
-      <p>Fait par Hugo Walandowitsch <span>2024</span></p>
+      <h5 class="text-xl text-gray-200">Fait en 2024 - Hugo Walandowitsch</h5>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
-    </script>
-    <script>
-      const menuHamburger = document.querySelector(".menu");
-      const navLinks = document.querySelector(".nav_links");
-
-      menuHamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("mobile-menu");
-      });
     </script>
   </body>
 </html>
